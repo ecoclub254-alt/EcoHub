@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>EcoHub</title>
+    <style>
+        .navbar {
+            background-color: #EB5B00;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item.dropdown .dropdown-menu {
+            background-color: #ebeef5;
+        }
+        
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .centered-div {
+            background-color: #F5F7F8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .centered-div h3,
+        .centered-div p {
+            color: #151515;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .footer {
+            background-color: #EB5B00;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footer h3 {
+            color: #fff;
+        }
+
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .icon-image {
+            max-height: 70px;
+        }
+
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .whatsapp-button img {
+            margin-right: 8px;
+        }
+
+        .about-us {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-us .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .about-us .image {
+            height: 300px;
+        }
+
+        .about-us .image img {
+            width: auto;
+            height: 100%;
+        }
+        .horizontal-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items if they vary in height */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.horizontal-list li {
+    margin-right: 10px; /* Add space between the items */
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Construction Engineering
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
+                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
+                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
+                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Furniture Place
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
+                            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
+                            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
+                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
+                            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
+                            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="jumbotron jumbotron-fluid text-center mb-0 position-relative" style="height: 150px; overflow: hidden;">
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline class="position-absolute top-0 start-0 w-100 h-100" 
+                   style="object-fit: cover; z-index: -1;">
+                <source src="vids/0_Wind Energy_Renewable Energy_3840x2160.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <!-- Content Overlay -->
+            <div class="container d-flex flex-column justify-content-center align-items-center position-relative"
+                 style="height: 100%; color: #EB5B00; z-index: 1;">
+                <h3 class="display-4 text-center" style="font-size: 1.5rem; line-height: 1.2;">
+                    Embracing Environmental Sustainability Research with Strategic Planning, through Unified Approach.
+                </h3>
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="centered-div">
+            <div class="container text-left"> 
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <div>
+                        <h3 class="h4 mb-3">Redefining civilization through Research, engineering, innovation and creative practices.</h3>
+                        <p class="lead">
+                            At the advancement of infrastructure development, our unwavering dedication to sustainable solution practices paves the way for a future where progress seamlessly intertwines with environmental stewardship.
+                        </p>
+                        <a href="water-project.html" class="btn btn-primary">Kenya's Water Revolution...</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="centered-div">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md">
+                        <h2>Environment</h2>
+                        <p>Creating an environment where cleanliness and sanitation are paramount, nurturing our planet for a sustainable future.</p>
+                        <img src="imgs/tr.jpeg" height="190" alt="environment">
+                    </div>
+                    <div class="col-md">
+                        <h2>Engineering</h2>
+                        <p>precision welding to the artistry of painting, the fluidity of plumbing, and the finesse of interior design.</p>
+                        <img src="imgs/tr2 (1).jpeg" height="190" alt="engineering">
+                    </div>
+                    <div class="col-md">
+                        <h2>Innovation</h2>
+                        <p>turning imagination into reality, every challenge is a canva and every solution a stroke of genius......</p>
+                        <img src="imgs/tr333.png" height="190" alt="innovation">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>About Us</h2>
+                        <p>
+                            Our story is one of passion, dedication, and a commitment to fostering sustainable development, we believe in engineering with a purpose, blending environmental stewardship with cutting-edge solutions to create a brighter future for all. Our expertise extends beyond providing top-tier services; we are also passionate advocates for environmental sustainability, infrastructure development, and climate action.
+                        </p>
+                        <div style="text-align: center; margin: 20px;">
+                            <video width="500" controls>
+                                <source src="vids/BIC_ Two minutes to understand sustainable development.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <h2>Our Consorts</h2>
+                        <ul class="horizontal-list">
+                            <li>
+                                <a href="mtoto ni jamii/index.html">
+  <img src="imgs/mtoto nii jamii.webp" alt="IYF Kenya" width="170" height="100">
+</a><h3>mtoto ni jamii</h3>
+                            </li>
+                            <li>
+                                <a href="https://kyeop.go.ke/" target="_blank">
+                                    <img src="imgs/n-kyeop.png" alt="KYEOP" width="150" height="80">
+                                </a>
+                            </li>
+                            <li>
+                        </ul>
+                        <li>
+                            <ul class="horizontal-list">
+                            <a href="https://www.kewi.go.ke" target="_blank">
+                                <img src="imgs/KEWI_NEW_LOGO.png" alt="KEWI" width="350" height="80">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ebk.go.ke/" target="_blank">
+                                <img src="imgs/EBK.jpeg" alt="EBC" width="350" height="250">
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <h3 class="footer-title">Connect with Us</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                        <li><a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <h3>Action</h3>
+                    <img src="imgs/frutiger aero.jpeg" height="110" alt="sustainability">
+                    <p>EcoHub, We innovate sustainable resilient infrastructures, integrating green practices.</p>
+                    <a href="about_us.html" class="btn btn-primary">Be part of us</a>
+                </div>
+                
+                <div class="col-lg">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
+                    <div class="whatsapp-button">
+                        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-outline-success">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
