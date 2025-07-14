@@ -1,291 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mtoto Ni Jamii</title>
-    <style>
-      html {
-            scroll-behavior: smooth;
-        }
-      body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-header, footer { background-color: #0c0a85; color: white; text-align: center; padding: 1rem; }
-nav a { margin: 0 1rem; color: white; text-decoration: none; }
-main { padding: 2rem; }
-section { margin-bottom: 2rem; }
-.intro {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mtoto Ni Jamii | Empowering Teens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
 
-        .intro h2 {
-            font-size: 2rem;
-            color: #1875cc;
-            margin-bottom: 1rem;
-        }
+    header {
+      background: linear-gradient(120deg, #0c0a85, #e912a9);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-        .intro p {
-            font-size: 1.1rem;
-            color: #1d1b1b;
-        }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
+    nav a {
+      margin: 0 0.8rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    main {
+      padding: 2rem 1rem;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+    .hero {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+    .hero h2 {
+      color: #0c0a85;
+      margin-bottom: 0.5rem;
+    }
 
-        .card-content {
-            padding: 1rem;
-        }
+    .hero p {
+      color: #333;
+      font-size: 1.1rem;
+    }
 
-        .card-content h3 {
-            color: #0c0a85;
-            margin-bottom: 0.5rem;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
 
-        .card-content p {
-            font-size: 1rem;
-            color: #1d1b1b;
-        }
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
 
-        .card-content a {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #e912a9;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-        .card-content a:hover {
-            color: #2e7d32;
-        }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .carousel-donate-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            overflow: hidden;
-        }
+    .card-content {
+      padding: 1rem;
+    }
 
-        .carousel-wrapper {
-            flex: 3;
-            text-align: center;
-        }
+    .card-content h3 {
+      color: #0c0a85;
+      margin-bottom: 0.5rem;
+    }
 
-        .carousel {
-            display: flex;
-            gap: 1rem;
-            animation: slide 15s infinite;
-        }
+    .carousel-donate-section {
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-        .slide {
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
+    .carousel-donate-section button {
+      background: #e912a9;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-        .slide img {
-            width: 60%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .carousel-donate-section button:hover {
+      background: #c00790;
+    }
 
-        .donate-wrapper {
-            flex: 1;
-            text-align: center;
-        }
+    .video-partners-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-        .donate-wrapper button {
-            background: #4CAF50;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+    .video-wrapper video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-        .donate-wrapper button:hover {
-            background: #45a049;
-        }
+    .partners-wrapper {
+      text-align: center;
+    }
 
-        @keyframes slide {
-            0%, 20% { transform: translateX(0); }
-            25%, 45% { transform: translateX(-100%); }
-            50%, 70% { transform: translateX(-200%); }
-            75%, 95% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); }
-        }
+    .partners-wrapper img {
+      width: 100px;
+      margin: 0.5rem;
+      border-radius: 8px;
+    }
 
-        .video-partners-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
+    footer {
+      text-align: center;
+      background: #0c0a85;
+      color: white;
+      padding: 1rem;
+    }
 
-        .video-wrapper {
-            flex: 2;
-            text-align: center;
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .partners-wrapper {
-            flex: 1;
-            text-align: center;
-        }
-
-        .partners-wrapper a {
-            display: inline-block;
-            margin: 0.5rem;
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-        }
-
-        .partners-wrapper img {
-            margin-bottom: 0.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100px;
-        }
-
-        .partners-wrapper a:hover {
-            color: #2e7d32;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .carousel-donate-section, .video-partners-section {
-                flex-direction: column;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .video-partners-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to Mtoto Ni Jamii</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="programs.html">Programs</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Empowering the Teen</h2>
-            <p>Interactive engagements, education, and mentorship.</p>
-        </section>
-        <section class="cards" id="projects">
-            <div class="card">
-                <img src="img/education8128_n.WebP.jpg" alt="UNICEF Menstrual Health Program">
-                <div class="card-content">
-                    <h3>Menstrual Health Awareness</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/R.jpg"Tree Planting for Climate Action">
-                <div class="card-content">
-                    <h3>Climate Action</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/Track1576_n.WebP.jpg" alt="Youth Talk Engagement">
-                <div class="card-content">
-                    <h3>Teen Connect</h3>
-                </div>
-            </div>
-        </section>
-        <section class="cards" id="projects">
-            <div class="card">
-                <img src="img/starzone_77704dac.WebP.jpg" alt="UNICEF Menstrual Health Program">
-                <div class="card-content">
-                    <h3>Starzone F.C</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/Dance 13.48.08_ab488691.WebP.jpg"Tree Planting for Climate Action">
-                <div class="card-content">
-                    <h3>Culture</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/School-tree-planting-exercise-2-691x600.jpg" alt="Youth Talk Engagement">
-                <div class="card-content">
-                    <h3>Agriculture</h3>
-                </div>
-            </div>
-        </section>
-        <section class="carousel-donate-section">
-            
-            <div class="donate-wrapper" id="Donate">
-                <button onclick="window.location.href='#donate'">💗 Donate Now</button>
-            </div>
-        </section>
 
-        <section class="video-partners-section">
-            <div class="video-wrapper">
-                <h2 style="color: #1875cc;">Watch Our Story</h2>
-                <video controls>
-                    <source src="video/story.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="partners-wrapper">
-                <h2 style="color: #e912a9;">Our Partners</h2>
-                <a href="Restoration/index.html">
-  <img src="img/urejesho.jpg" alt="Urejesho Media Logo">
-</a>
-                <a href="https://evansgitau254.github.io/EcoHub/" target="_blank" rel="noopener">
-  <img src="img/ecohub.jpeg" alt="EcoHub Logo">
-</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Mtoto Ni Jamii Foundation</p>
-    </footer>
+<body>
+  <header>
+    <h1>Mtoto Ni Jamii Foundation</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Empowering the Teen Generation</h2>
+      <p>Menstrual education for girls. Purpose-driven coaching for boys. Building dignity, awareness, and opportunity.</p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <img src="img/education8128_n.WebP.jpg" alt="Menstrual Health Education">
+        <div class="card-content">
+          <h3>Menstrual Health</h3>
+          <p>Workshops and donation drives that support vulnerable girls with education and sanitary pads.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/R.jpg" alt="Tree Planting">
+        <div class="card-content">
+          <h3>Climate Action</h3>
+          <p>We engage teens in environmental responsibility through tree planting and climate advocacy.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Track1576_n.WebP.jpg" alt="Youth Talk Engagement">
+        <div class="card-content">
+          <h3>Teen Connect</h3>
+          <p>Dialogue forums that give young people a voice and guidance for life decisions and mental clarity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <img src="img/starzone_77704dac.WebP.jpg" alt="Starzone FC">
+        <div class="card-content">
+          <h3>Starzone F.C</h3>
+          <p>Building teamwork and life values through local youth football and mentorship programs.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Dance 13.48.08_ab488691.WebP.jpg" alt="Cultural Expression">
+        <div class="card-content">
+          <h3>Culture & Arts</h3>
+          <p>From dance to poetry, we help youth express purpose through heritage, faith, and identity.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/School-tree-planting-exercise-2-691x600.jpg" alt="Agriculture Program">
+        <div class="card-content">
+          <h3>Agriculture</h3>
+          <p>Teaching sustainability and agribusiness through school gardens and farm initiatives.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-donate-section" id="donate">
+      <h3>Support the Cause</h3>
+      <p style="max-width: 500px; text-align: center;">Your donation helps educate, equip, and empower teens—especially vulnerable girls in need of menstrual care and life mentorship.</p>
+      <button onclick="window.location.href='mailto:info@mtotonijamii.org'">💗 Donate Now</button>
+    </section>
+
+    <section class="video-partners-section">
+      <div class="video-wrapper">
+        <h2 style="color: #0c0a85;">Watch Our Story</h2>
+        <video controls>
+          <source src="video/story.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="partners-wrapper">
+        <h3 style="color: #e912a9;">Our Partners</h3>
+        <a href="Restoration/index.html">
+          <img src="img/urejesho.jpg" alt="Urejesho Media">
+        </a>
+        <a href="https://evansgitau254.github.io/EcoHub/" target="_blank">
+          <img src="img/ecohub.jpeg" alt="EcoHub">
+        </a>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer>
+    <p>&copy; 2025 Mtoto Ni Jamii Foundation. Empowering teens with dignity & purpose.</p>
+  </footer>
 </body>
 </html>
