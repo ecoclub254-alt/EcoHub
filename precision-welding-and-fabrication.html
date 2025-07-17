@@ -6,266 +6,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <title>Welding and Fabrication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Precision Welding and Fabrication</title>
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
         .navbar {
             background-color: #071952;
         }
-
         .navbar-nav .nav-link {
             color: #fff !important;
         }
-
         .navbar-nav .nav-item.dropdown .dropdown-menu {
             background-color: #ebeef5;
         }
         .navbar-toggler-icon {
-    filter: invert(1);
-}
+            filter: invert(1);
+        }
 
-        
-        .centered-div {
-            background-color: #F5F7F8;
-            padding: 20px;
+        /* Title Banner */
+        .banner {
+            background: url('imgs/prwelding.png') center/cover no-repeat;
+            height: 250px;
+            color: white;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .banner h1 {
+            font-size: 2rem;
+            font-weight: bold;
         }
 
-        .centered-div h3,
-        .centered-div p {
-            color: #151515;
+        /* Section Backgrounds */
+        .section-light {
+            background: #f8f9ff;
+            padding: 50px 0;
+        }
+        .section-cream {
+            background: #fffaf5;
+            padding: 50px 0;
+        }
+        .section-soft {
+            background: #f6fff8;
+            padding: 50px 0;
         }
 
-        .container-fluid {
-            padding: 0;
+        .img-fluid {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta-btn img {
+            margin-right: 8px;
+        }
+        .cta-btn:hover {
+            background: #218838;
+            color: white;
+        }
+
         .footer {
-    background-color: #071952;
-    color: #fff;
-    padding: 50px 0;
-}
-
-.footer h3 {
-    color: #fff;
-}
-
-.footer ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin-bottom: 10px;
-}
-
-.footer p {
-    margin-bottom: 10px;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}   
+            background-color: #071952;
+            color: #fff;
+            padding: 50px 0;
+        }
+        .footer a {
+            color: #fff;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Construction Engineering
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                  <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                  <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                  <a class="dropdown-item" href="cabinetry-installation.html">cabinetry installation</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Furniture Place
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-                  <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-                  <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                  <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-                  <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-                  <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about_us.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
+            <a href="index.html" class="navbar-brand">
+                <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Construction Engineering
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
+                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
+                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
+                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-    <section class="bg-custom-secondary text-dark p-5 text-left text-sm-start">
+    <!-- TITLE BANNER -->
+    <div class="banner">
+        <h1 data-aos="fade-down">Welding & Fabrication – Crafted with Precision</h1>
+        <p data-aos="fade-up">Turning metal dreams into stylish, durable masterpieces</p>
+    </div>
+
+    <!-- INTRO SECTION -->
+    <section class="section-light">
         <div class="container">
-            <div class="d-sm-flex align-items-center justify-content-between">
-                <div>
-                    <h3 class="h5 mb-3">Ready to jazz up your metal dreams? Our team of pros is here to sprinkle some magic on your projects. From stylish doors to eye-catching grills, we'll weld your worries away with precision and pizzazz. Let's turn your vision into reality.</h3>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-primary">Precision Meets Creativity</h2>
+                    <p class="text-muted">
+                        Ready to jazz up your metal dreams? From stylish doors to eye-catching grills, 
+                        our skilled team welds with precision and artistry—turning your vision into reality.
+                    </p>
+                    <a href="https://wa.me/254742082219" target="_blank" class="cta-btn mt-3">
+                        <img src="imgs/wappicon.png" width="22" alt="WhatsApp"> Request a Quote
+                    </a>
                 </div>
-                <img class="img-fluid h-25" src="imgs/prwelding.png" height="200" width="600" alt="President Uhuru Kenyatta appreciating furniture made by our company">
-            </div>
-        </div>
-    </section>
-    
-    <section class="bg-custom-secondary">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <img src="imgs/window1.jpeg" height="300" alt="elegant furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/window2.jpeg" height="380" alt="office furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/window3.jpeg" height="300" alt="dining furniture">
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <img src="imgs/prwelding.png" class="img-fluid" alt="Welding Work">
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="bg-custom-dark">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <img src="imgs/door1.jpeg" height="350" alt="elegant furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/door2.jpeg" height="300" alt="office furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/door3.jpeg" height="300" alt="dining furniture">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="bg-custom-dark">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <img src="imgs/balkon.jpeg" height="350" alt="elegant furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/Horizontal Railing Stairworks.jpeg" height="360" alt="office furniture">
-                </div>
-                <div class="col">
-                    <img src="imgs/welding.jpg" height="360" alt="dining furniture">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/gr.jpeg" height="350" alt="elegant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/gr2.jpeg" height="250" alt="office furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/gr3.jpeg" height="300" alt="dining furniture">
-            </div>
-        </div>
-    </div>
-    
-    <div class="container text-center mt-5">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/g3.jpeg" height="320" alt="elegant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/mg1.jpeg" height="270" alt="office furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/mg2.jpeg" height="300" alt="dining furniture">
-            </div>
-        </div>
-    </div>
-    <div class="whatsapp-button">
-        <style>
-            .whatsapp-button {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                margin-top: 20px;
-            }
 
-            .whatsapp-button img {
-                margin-right: 8px;
-            }
-        </style>
-        <a href="https://wa.me/742082219" target="_blank">
-            <img src="imgs/wappicon.png" alt="WhatsApp Icon" width="44" height="44">
-            Chat on WhatsApp
+    <!-- WINDOWS & GRILLS -->
+    <section class="section-cream">
+        <div class="container text-center">
+            <h3 class="mb-4 text-primary" data-aos="fade-up">Elegant Windows & Grills</h3>
+            <div class="row g-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/window1.jpeg" class="img-fluid" alt="Window"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/window2.jpeg" class="img-fluid" alt="Window"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/window3.jpeg" class="img-fluid" alt="Window"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOORS & RAILINGS -->
+    <section class="section-soft">
+        <div class="container text-center">
+            <h3 class="mb-4 text-success" data-aos="fade-up">Stylish Doors & Railings</h3>
+            <div class="row g-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/door1.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/door2.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/door3.jpeg" class="img-fluid"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/balkon.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/Horizontal Railing Stairworks.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/welding.jpg" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOM GRILLS -->
+    <section class="section-cream">
+        <div class="container text-center">
+            <h3 class="mb-4 text-primary" data-aos="fade-up">Custom Grills & Masterpieces</h3>
+            <div class="row g-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/gr.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/gr2.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/gr3.jpeg" class="img-fluid"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/g3.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/mg1.jpeg" class="img-fluid"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/mg2.jpeg" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section-light text-center">
+        <h4 class="text-success mb-3" data-aos="fade-up">Let's Build Something Amazing Together</h4>
+        <a href="https://wa.me/254742082219" target="_blank" class="cta-btn">
+            <img src="imgs/wappicon.png" width="22" alt="WhatsApp"> Chat with Us Now
         </a>
-    </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg">
-                    <h3 class="footer-title">Connect with Us</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                        <li><a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
-                </div>
                 <div class="col-md">
-                    <h3>Action</h3>
-                    <img src="imgs/frutiger aero.jpeg" height="110" alt="sustainability">
-                    <p>EcoHub, We innovate sustainable resilient infrastructures, integrating green practices.</p>
-                    <a href="about_us.html" class="btn btn-primary">Be part of us</a>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3>Quick Links</h3>
                     <ul class="list-unstyled">
                         <li><a href="about_us.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
+                <div class="col-md">
+                    <h3>Contact</h3>
+                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi</p>
                     <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
                     <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
-                    <div class="whatsapp-button">
-                        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-outline-success">Chat on WhatsApp</a>
-                    </div>
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
-
