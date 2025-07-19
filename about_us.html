@@ -4,82 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    <title>About Us</title>
+    <title>About Us | EcoHub Solution</title>
     <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
         .navbar {
             background-color: #071952;
         }
-
         .navbar-nav .nav-link {
             color: #fff !important;
+            font-weight: 500;
         }
-
-        .navbar-nav .nav-item.dropdown .dropdown-menu {
-            background-color: #ebeef5;
-        }
-        
-        .navbar-toggler-icon {
-    filter: invert(1);
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28155, 155, 155, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-        .centered-div {
-            background-color: #b1d0e0;
-            padding: 20px;
+        .hero-section {
+            background: linear-gradient(rgba(7, 25, 82, 0.7), rgba(7, 25, 82, 0.7)), url('imgs/bdroom.jpg') center/cover;
+            color: #fff;
             text-align: center;
+            padding: 80px 20px;
         }
-
-        .centered-div h3,
-        .centered-div p {
-            color: #151515;
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
         }
-
-        .container-fluid {
-            padding: 0;
+        .hero-section p {
+            max-width: 600px;
+            margin: 15px auto;
+            font-size: 1.1rem;
         }
-
+        .about-content {
+            padding: 60px 20px;
+        }
+        .about-content h3 {
+            color: #071952;
+            font-weight: bold;
+        }
+        .about-content p {
+            line-height: 1.7;
+            color: #444;
+        }
+        .highlight-box {
+            background: #b1d0e0;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .highlight-box h4 {
+            color: #071952;
+        }
+        .highlight-box form .btn {
+            background: #071952;
+            border: none;
+        }
         .footer {
             background-color: #071952;
             color: #fff;
             padding: 50px 0;
         }
-
-        .footer h3 {
-            color: #fff;
-        }
-
-        .footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
         .footer a {
             color: #fff;
             text-decoration: none;
         }
-
         .footer a:hover {
             text-decoration: underline;
         }
-        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg py-3">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
+                <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -87,14 +85,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle light-text" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Construction Engineering
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
                             <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
                             <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                            <a class="dropdown-item" href="cabinetry-installation.html">cabinetry installation</a>
+                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -105,110 +103,65 @@
                             <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
                             <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
                             <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Restaurant Furniture</a>
+                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
                             <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
                             <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link light-text" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="about_us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link light-text" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container py-5">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>About EcoHub Solution</h1>
+        <p>Engineering with purpose – delivering innovative solutions while advocating for a sustainable future.</p>
+    </section>
+
+    <!-- About Content -->
+    <div class="container about-content">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h3 class="text-success">Who We Are</h3>
-                <img src="imgs/bdroom.jpg" height="300" alt="">
-                <p class="text-dark">Welcome to EcoHub Solution, the forefront of professional engineering services, innovation, and advocacy. We are dedicated to delivering exceptional solutions while championing causes vital to our planet's well-being.
+                <h3>Who We Are</h3>
+                <p>
+                    Welcome to <strong>EcoHub Solution</strong>, the forefront of professional engineering services, innovation, and advocacy.  
+                    We are dedicated to delivering exceptional solutions while championing environmental sustainability, infrastructure development, and climate action.
+                </p>
+                <p>
+                    At EcoHub, we believe in <strong>engineering with a purpose</strong>. Through our advocacy efforts, we aim to raise awareness, promote sustainable practices, 
+                    and build resilient infrastructure to withstand the challenges of climate change.
+                </p>
+                <p>
+                    With professionalism, innovation, and social responsibility at our core, <strong>EcoHub Solution</strong> is your trusted partner 
+                    in engineering excellence and environmental stewardship.
+                </p>
 
-                At EcoHub, we believe in engineering with a purpose. In addition to offering top-tier services, we are passionate advocates for environmental sustainability, infrastructure development, and climate action. Our team is committed to leveraging our expertise and resources to drive positive change in these critical areas.
-                
-                Through our advocacy efforts, we aim to raise awareness, promote sustainable practices, and contribute to the development of resilient infrastructure that can withstand the challenges of climate change. By integrating environmental considerations into every aspect of our work, we strive to create a brighter, more sustainable future for generations to come.
-                
-                With a firm dedication to professionalism, innovation, and social responsibility, EcoHub Solution is your trusted partner in engineering excellence and environmental stewardship. Join us as we work together to build a better world, one project at a time.</p>
-                
-            
-                <div class="centered-div">
+                <div class="highlight-box text-center">
                     <h4>Subscribe to Our Newsletter</h4>
-                    <p>Stay updated with our latest projects, news, and environmental advocacy efforts. Subscribe to our newsletter!</p>
-                    <form action="subscribe.php" method="post">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Enter your email address" required>
-                        </div>
+                    <p>Stay updated with our latest projects, news, and environmental advocacy efforts.</p>
+                    <form action="subscribe.php" method="post" class="form-inline justify-content-center">
+                        <input type="email" class="form-control mr-2" name="email" placeholder="Enter your email" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="whatsapp-button">
-        <style>
-            .whatsapp-button {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                margin-top: 20px;
-            }
 
-            .whatsapp-button img {
-                margin-right: 8px;
-            }
-        </style>
-        <a href="https://wa.me/742082219" target="_blank">
-            <img src="imgs/wappicon.png" alt="WhatsApp Icon" width="44" height="44">
-            Chat on WhatsApp
-        </a>
-    </div>
+    <!-- Footer -->
     <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h3 class="footer-title">Connect with Us</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                        <li><a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <h3>Action</h3>
-                    <img src="imgs/frutiger aero.jpeg" height="110" alt="sustainability">
-                    <p>EcoHub, We innovate sustainable resilient infrastructures, integrating green practices.</p>
-                    <a href="about_us.html" class="btn btn-primary">Be part of us</a>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
-                    <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
-                    <div class="whatsapp-button">
-                        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-outline-success">Chat on WhatsApp</a>
-                    </div>
-                </div>
-            </div>
+        <div class="container text-center">
+            <p>© 2025 EcoHub Solution | Engineering a Sustainable Future</p>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-    

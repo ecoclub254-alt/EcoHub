@@ -41,7 +41,23 @@
         .container-fluid {
             padding: 0;
         }
+        .btn-water {
+    background-color: #1E90FF; /* Bright water blue */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
+.btn-water:hover {
+    background-color: #00BFFF; /* Lighter aqua shade */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
         .footer {
             background-color: #EB5B00;
             color: #fff;
@@ -126,7 +142,7 @@
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
+                <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -177,7 +193,20 @@
         <p class="lead">
           We are committed to environmental sustainability through research, strategic planning, innovation, and unified action. Our vision is to define civilization by harmonizing development with ecological stewardship.
         </p>
-        <a href="about.html" class="btn btn-outline-success mt-3">Learn More</a>
+        <a href="about_us.html" 
+   class="btn btn-success mt-3" 
+   style="background: linear-gradient(135deg, #28a745, #5cd65c); 
+          color: #fff; 
+          border: none; 
+          padding: 10px 25px; 
+          font-size: 18px; 
+          font-weight: bold; 
+          border-radius: 50px; 
+          box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+          transition: all 0.3s ease;">
+   🌿 Learn More
+</a>
+
       </div>
 
       <!-- Image Column -->
@@ -194,23 +223,28 @@
   <div class="container">
     <div class="row text-center">
       
-      <div class="col-md" data-aos="fade-up">
-        <h3 class="mb-2">Environment</h3>
-        <p class="text-muted">Clean, green, and sustainable living for future generations.</p>
-        <img src="imgs/tr.jpeg" class="img-fluid rounded" height="190" alt="Environment">
-      </div>
-      
-      <div class="col-md" data-aos="fade-down">
-        <h3 class="mb-2">Engineering</h3>
-        <p class="text-muted">Craftsmanship meets function—from welding to design excellence.</p>
-        <img src="imgs/tr2 (1).jpeg" class="img-fluid rounded" height="190" alt="Engineering">
-      </div>
-      
-      <div class="col-md" data-aos="fade-left">
-        <h3 class="mb-2">Innovation</h3>
-        <p class="text-muted">Ideas made real. Solutions that inspire change.</p>
-        <img src="imgs/tr333.png" class="img-fluid rounded" height="190" alt="Innovation">
-      </div>
+      <div class="row text-center">
+
+  <div class="col-md" data-aos="fade-up" style="margin-bottom:20px;">
+    <h3 class="mb-2">🌱 Environment</h3>
+    <p class="text-muted">Clean, green, and sustainable living for future generations.</p>
+    <img src="imgs/tr.jpeg" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
+  </div>
+  
+  <div class="col-md" data-aos="fade-down" style="margin-bottom:20px;">
+    <h3 class="mb-2">⚙️ Engineering</h3>
+    <p class="text-muted">Craftsmanship meets function—from welding to design excellence.</p>
+    <img src="imgs/tr2 (1).jpeg" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
+  </div>
+  
+  <div class="col-md" data-aos="fade-left" style="margin-bottom:20px;">
+    <h3 class="mb-2">💡 Innovation</h3>
+    <p class="text-muted">Transforming great visions into meaningful, tangible impact.</p>
+    <img src="imgs/tr333.png" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
+  </div>
+
+</div>
+
       
     </div>
   </div>
@@ -224,18 +258,24 @@
     <div class="row align-items-center">
 
       <!-- Left Column: Embedded Video -->
-      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/zx04Kl8y4dE" 
-                  title="Kenya Water Project" allowfullscreen></iframe>
-        </div>
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" 
+     style="max-width:850px; margin:0 auto;">
+    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+        <iframe src="https://www.youtube.com/embed/zx04Kl8y4dE" 
+                title="Kenya Water Project" allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
+        </iframe>
+    </div>
       </div>
 
       <!-- Right Column: Project Description -->
       <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
         <h2 class="mb-3">Kenya's Water Revolution</h2>
         <p class="lead mb-4">Discover how strategic engineering is transforming water access across Kenya.</p>
-        <a href="water-project.html" class="btn btn-primary btn-lg">Explore the Project</a>
+        <a href="water-project.html" class="btn btn-water btn-lg rounded-pill">
+    💧 Explore the Project
+</a>
+
       </div>
 
     </div>
@@ -249,23 +289,19 @@
     <div class="row justify-content-center align-items-center text-center">
       <div class="col-sm-6 col-md-3 mb-4" data-aos="flip-left">
   <a href="mtoto ni jamii/index.html">
-    <img src="imgs/mtoto n jamii logo.png" alt="Mtoto Ni Jamii" class="img-fluid" width="170">
+    <img src="imgs/mtoto n jamii logo.png" alt="Mtoto Ni Jamii" class="img-fluid" width="150">
   </a>
 </div>
 
       <div class="col-sm-6 col-md-3 mb-4">
-        <a href="https://kyeop.go.ke/" target="_blank">
-          <img src="imgs/n-kyeop.png" alt="KYEOP" class="img-fluid" width="150">
-        </a>
-      </div>
+    <a href="https://nyotaproject.go.ke/" target="_blank">
+        <img src="imgs/NYOTA LOGO. 10.0. PNG.png" alt="Nyota Project" class="img-fluid" width="600">
+    </a>
+</div>
+
       <div class="col-sm-6 col-md-3 mb-4">
-        <a href="https://www.kewi.go.ke" target="_blank">
-          <img src="imgs/KEWI_NEW_LOGO.png" alt="KEWI" class="img-fluid" width="250">
-        </a>
-      </div>
-      <div class="col-sm-6 col-md-3 mb-4">
-        <a href="https://ebk.go.ke/" target="_blank">
-          <img src="imgs/EBK.jpeg" alt="EBK" class="img-fluid" width="250">
+        <a href="https://iyfkenya.org/" target="_blank">
+          <img src="imgs/iyf-full-logo.svg" alt="KEWI" class="img-fluid" width="250">
         </a>
       </div>
     </div>
@@ -296,6 +332,10 @@
           <li><a href="about_us.html" class="text-light text-decoration-none d-block mb-2">About Us</a></li>
           <li><a href="contact.html" class="text-light text-decoration-none d-block mb-2">Contact</a></li>
           <li><a href="https://daily-matters-matter.blogspot.com/" class="text-light text-decoration-none d-block">Blog</a></li>
+          <a href="Evans.html" class="btn btn-primary btn-lg" 
+   style="background-color:#0c0a85; border:none; border-radius:50px; padding:10px 25px; font-size:1.1rem;">
+   🌟 Meet Evans
+</a>
         </ul>
       </div>
 
@@ -305,7 +345,7 @@
         <p class="mb-2"><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
         <p class="mb-2"><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
         <p class="mb-3"><i class="bi bi-telephone-fill"></i> +254 742 082 219</p>
-        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-success btn-sm">Chat on WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=254742082219" class="btn btn-success btn-sm">Chat on WhatsApp</a>
       </div>
 
     </div>

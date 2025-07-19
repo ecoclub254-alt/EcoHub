@@ -2,253 +2,204 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
     <title>Bar and Restaurant Furniture</title>
+
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <style>
         .navbar {
             background-color: #32012F;
         }
-
         .navbar-nav .nav-link {
             color: #fff !important;
         }
 
-        .navbar-nav .nav-item.dropdown .dropdown-menu {
-            background-color: #ebeef5;
-        }
-        
-        .navbar-toggler-icon {
-            filter: invert(1);
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28155, 155, 155, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-
-        .centered-div {
-            background-color: #F5F7F8;
-            padding: 20px;
+        .section-title {
+            color: #ffcc00;
+            font-weight: bold;
             text-align: center;
+            margin: 40px 0 20px;
+        }
+        .section-title i {
+            margin-right: 8px;
         }
 
-        .centered-div h3,
-        .centered-div p {
-            color: #151515;
+        .card {
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+        .card-body {
+            background: #f8f9fa;
         }
 
-        .container-fluid {
-            padding: 0;
+        .btn-quote {
+            background-color: #ffcc00;
+            border: none;
+            color: #000;
+            font-weight: bold;
         }
 
         .footer {
             background-color: #32012F;
             color: #fff;
-            padding: 50px 0;
+            padding: 40px 0;
+            margin-top: 40px;
         }
-
         .footer h3 {
-            color: #fff;
+            color: #ffcc00;
         }
-
-        .footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
         .footer a {
             color: #fff;
-            text-decoration: none;
         }
-
         .footer a:hover {
             text-decoration: underline;
-        }
-
-        /* Add margin to images */
-        .container img {
-            margin: 10px;
         }
 
         .whatsapp-button {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            margin-top: 20px;
+            margin: 20px;
         }
-
         .whatsapp-button img {
             margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg py-3">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">
-                <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle light-text" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Construction Engineering
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                            <a class="dropdown-item" href="cabinetry-installation.html">cabinetry installation</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Furniture Place
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-                            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-                            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-                            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-                            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link light-text" href="about_us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link light-text" href="contact.html">Contact</a>
-                    </li>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" data-toggle="dropdown">Construction Engineering</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding & Fabrication</a>
+                        <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom & Plumbing</a>
+                        <a class="dropdown-item" href="painting-and-interior-design.html">Painting & Interior Design</a>
+                        <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Furniture Place</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
+                        <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
+                        <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
+                        <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar & Restaurant Furniture</a>
+                        <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
+                        <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-light p-5 text-center">
+    <h2>Elegant Bar & Restaurant Furniture for Memorable Dining</h2>
+    <p>We design and supply high-quality furniture that elevates dining experiences — from casual cafés to luxury restaurants and bars.</p>
+</section>
+
+<!-- RESTAURANT FURNITURE -->
+<h3 class="section-title"><i class="bi bi-cup-hot"></i>Restaurant Dining Sets</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"><div class="card"><img src="imgs/resres.jpeg" class="card-img-top"><div class="card-body"><p>Vibrant orange four-seater perfect for modern eateries.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/res222.jpg" class="card-img-top"><div class="card-body"><p>Classic black four-seater for sleek restaurant interiors.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/resyellow.jpeg" class="card-img-top"><div class="card-body"><p>Bright yellow seating for casual and lively dining spaces.</p></div></div></div>
+    </div>
+</div>
+
+<!-- BAR STOOLS & HIGH TABLES -->
+<h3 class="section-title"><i class="bi bi-glass"></i>Bar Stools & High Tables</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"><div class="card"><img src="imgs/dining1.jpeg" class="card-img-top"><div class="card-body"><p>Minimalist high bar stools with round table — ideal for bistros.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/brzzz.jpeg" class="card-img-top"><div class="card-body"><p>Industrial-style square table with four cushioned bar stools.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/Awesome Wood Project Ides.jpeg" class="card-img-top"><div class="card-body"><p>Metal bar stools with wooden seats for rustic vibes.</p></div></div></div>
+    </div>
+</div>
+
+<!-- HOTEL & CAFE FURNITURE -->
+<h3 class="section-title"><i class="bi bi-house-door"></i>Hotel & Café Furniture</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"><div class="card"><img src="imgs/res4.jpeg" class="card-img-top"><div class="card-body"><p>Elegant wooden dining set designed for hotel lounges.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/ca4492c8-061b-4710-a2f3-704075988e61.jpeg" class="card-img-top"><div class="card-body"><p>Compact café tables with comfortable seating.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="imgs/res6.jpeg" class="card-img-top"><div class="card-body"><p>Stylish high-back chairs for luxury dining areas.</p></div></div></div>
+    </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div class="container my-4">
+    <h3 class="section-title"><i class="bi bi-check-circle"></i>Why Choose Our Bar & Restaurant Furniture?</h3>
+    <ul>
+        <li><strong>Durable & Stylish:</strong> Made to last with contemporary designs.</li>
+        <li><strong>Customizable:</strong> Colors, materials, and sizes to match your brand.</li>
+        <li><strong>Comfort-Focused:</strong> Designed for customer satisfaction.</li>
+        <li><strong>Affordable:</strong> Competitive pricing without compromising quality.</li>
+    </ul>
+</div>
+
+<!-- WHATSAPP -->
+<div class="whatsapp-button">
+    <a href="https://wa.me/742082219" target="_blank">
+        <img src="imgs/wappicon.png" alt="WhatsApp Icon" width="44" height="44"> Chat on WhatsApp
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
                 </ul>
             </div>
+            <div class="col-md">
+                <h3>Contact</h3>
+                <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
+                <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
+                <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
+            </div>
         </div>
-    </nav>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/resres.jpeg" height="300" alt="orange four seater Restaurant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/res222.jpg" height="300" alt="black four seater Restaurant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/resyellow.jpeg" height="300" alt="Restaurant furniturefour seater">
-            </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2025 EcoHub Solutions. All rights reserved.</p>
         </div>
     </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/rrr.jpg" height="300" alt="Restaurant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/rrrr.jpg" height="300" alt="Restaurant furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/res5.jpeg" height="300" alt="bar-and-restaurant-furniture">
-            </div>
-        </div>
-    </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/ca4492c8-061b-4710-a2f3-704075988e61.jpeg" height="300" alt="hotel furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/res4.jpeg" height="300" alt="hotel furniture">
-            </div>
-            <div class="col">
-                <img src="imgs/res6.jpeg" height="300" alt="hotel furniture">
-            </div>
-        </div>
-    </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/brz.jpeg" height="320" alt="restaurant bench and table">
-            </div>
-            <div class="col">
-                <img src="imgs/dining1.jpeg" height="320" alt="two high bar and restaurant stools with a round table">
-            </div>
-            <div class="col">
-                <img src="imgs/brzzz.jpeg" height="320" alt="high raised four bar stool with a squared table">
-            </div>
-        </div>
-    </div>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <img src="imgs/Awesome Wood Project Ides.jpeg" height="320" alt="metal bar stool wooden seat">
-            </div>
-            <div class="col">
-                <img src="imgs/Conjunto Mesa Alta Bar Bistrô Quadrada Pinus 4 Bancos Estofado Industrial Black Don Castro Decor Ind.jpeg" height="320" alt="bar stools cussioned seat">
-            </div>
-            <div class="col">
-                <img src="imgs/download (20).jpeg" height="320" alt="cussioned stool with back extension">
-            </div>
-        </div>
-    </div>
-    <div class="whatsapp-button">
-        <a href="https://wa.me/742082219" target="_blank">
-            <img src="imgs/wappicon.png" alt="WhatsApp Icon" width="44" height="44">
-            Chat on WhatsApp
-        </a>
-    </div>
-    <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h3 class="footer-title">Connect with Us</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                        <li><a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <h3>Action</h3>
-                    <img src="imgs/frutiger aero.jpeg" height="110" alt="sustainability">
-                    <p>EcoHub, We innovate sustainable resilient infrastructures, integrating green practices.</p>
-                    <a href="about_us.html" class="btn btn-primary">Be part of us</a>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
-                    <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
-                    <div class="whatsapp-button">
-                        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-outline-success">Chat on WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

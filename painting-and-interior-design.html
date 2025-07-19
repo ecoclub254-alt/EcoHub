@@ -6,39 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Painting and Interior design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Painting & Interior Design</title>
     <style>
+        body {
+            background-color: #fdfdfd;
+        }
         .navbar {
             background-color: #071952;
         }
-
         .navbar-nav .nav-link {
             color: #fff !important;
         }
-
         .navbar-nav .nav-item.dropdown .dropdown-menu {
             background-color: #ebeef5;
         }
-        
         .navbar-toggler-icon {
-    filter: invert(1);
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28155, 155, 155, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+            filter: invert(1);
+        }
 
-        .centered-div {
-            background-color: #F5F7F8;
-            padding: 20px;
+        /* Banner */
+        .banner {
+            background: url('imgs/paintbg.jpg') center/cover no-repeat;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
             text-align: center;
+            background-color: rgba(20,20,20,0.5);
+            background-blend-mode: multiply;
+        }
+        .banner h1 {
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        .banner p {
+            font-size: 1.1rem;
         }
 
-        .centered-div h3,
-        .centered-div p {
-            color: #151515;
+        /* Sections */
+        .section-light {
+            background: #ffffff;
+            padding: 50px 0;
+        }
+        .section-soft {
+            background: #f8f9ff;
+            padding: 50px 0;
+        }
+        .section-cream {
+            background: #fff7f0;
+            padding: 50px 0;
         }
 
-        .container-fluid {
-            padding: 0;
+        /* Cards */
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+        }
+        .service-card i {
+            font-size: 2.3rem;
+            color: #ff6f00;
+            margin-bottom: 12px;
+        }
+
+        /* Images */
+        .img-fluid {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+        }
+
+        /* WhatsApp CTA */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta-btn img {
+            margin-right: 8px;
+        }
+        .cta-btn:hover {
+            background: #218838;
+            color: white;
         }
 
         .footer {
@@ -46,202 +106,160 @@
             color: #fff;
             padding: 50px 0;
         }
-
-        .footer h3 {
-            color: #fff;
-        }
-
-        .footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
         .footer a {
             color: #fff;
-            text-decoration: none;
         }
-
         .footer a:hover {
             text-decoration: underline;
         }
-        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg py-3">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg py-3">
         <div class="container">
             <a href="index.html" class="navbar-brand">
                 <img src="imgs/ecoeco.png" height="70" alt="EcoSolution Hub Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle light-text" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown">
                             Construction Engineering
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                            <a class="dropdown-item" href="cabinetry-installation.html">cabinetry installation</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding & Fabrication</a>
+                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom & Plumbing</a>
+                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting & Interior Design</a>
+                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Furniture Place
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-                            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-                            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Restaurant Furniture</a>
-                            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-                            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link light-text" href="about_us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link light-text" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header>
-        <div class="jumbotron jumbotron-fluid text-center mb-0" style="background-image: url(imgs/paintbg.jpg);">
-            <div class="container text-light">
-                <h1 class="display-4">Welcome to EcoHub Solution</h1>
-                <p class="lead">Your destination for sustainable constrution solutions and innovation</p>
-            </div>
-        </div>
-    </header>
-    <section id="services">
-        <div class="container">
-            <h2>Professional Painting</h2>
-            <p>We offer high-quality painting services for residential and commercial properties. From interior walls to exterior surfaces, we ensure impeccable results.</p>
-     </div>
-        </div>
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    <img src="imgs/papap.png" height="250" alt="">
-                  </div>
-                  <div class="col">
-                    <img src="imgs/interiorpaint.jpeg" height="400" alt="">
-                  </div>
-                  <div class="col">
-                    <img src="imgs/home.jpeg" height="280" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <h2>Interior Design Consultation</h2>
-                <p>Our interior design experts provide personalized consultations to enhance the aesthetic appeal and functionality of your space. Let us bring your vision to life.</p>
-         </div>
-            </div>
-                <div class="container text-center">
-                    <div class="row">
-                      <div class="col">
-                        <img src="imgs/id1.jpg" height="230" alt="">
-                      </div>
-                      <div class="col">
-                        <img src="imgs/id2.jpg" height="220" alt="">
-                      </div>
-                      <div class="col">
-                        <img src="imgs/id3.jpeg" height="300" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container text-center">
-                    <div class="row">
-                      <div class="col">
-                        <img src="imgs/painting apartment.jpg" height="185" alt="painting apartment">
-                      </div>
-                      <div class="col">
-                        <img src="imgs/painting-living-room.jpg" height="190" alt="painting-living-room">
-                      </div>
-                      <div class="col">
-                        <img src="imgs/painting-kitchen.jpg" height="200" alt="painting-kitchen">
-                      </div>
-                    </div>
-                  </div>
-    </section>
-    <div class="whatsapp-button">
-        <style>
-            .whatsapp-button {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                margin-top: 20px;
-            }
 
-            .whatsapp-button img {
-                margin-right: 8px;
-            }
-        </style>
-        <a href="https://wa.me/742082219" target="_blank">
-            <img src="imgs/wappicon.png" alt="WhatsApp Icon" width="44" height="44">
-            Chat on WhatsApp
-        </a>
+    <!-- BANNER -->
+    <div class="banner">
+        <div>
+            <h1 data-aos="fade-down">Painting & Interior Design</h1>
+            <p data-aos="fade-up">Transforming spaces with color, creativity & elegance</p>
+        </div>
     </div>
+
+    <!-- INTRO -->
+    <section class="section-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-warning">Premium Painting Services</h2>
+                    <p class="text-muted">
+                        Our professional painters deliver flawless finishes for both residential and commercial projects. From soft interior shades to bold exterior coats, we use high-quality eco-friendly paints to give your walls a stunning and durable look.
+                    </p>
+                    <a href="https://wa.me/254742082219" target="_blank" class="cta-btn mt-3">
+                        <img src="imgs/wappicon.png" width="22" alt="WhatsApp"> Request a Painter
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <img src="imgs/interiorpaint.jpeg" class="img-fluid" alt="Painting work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section-soft text-center">
+        <div class="container">
+            <h3 class="mb-5 text-warning" data-aos="fade-up">Our Painting Expertise</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="service-card">
+                        <i class="bi bi-brush"></i>
+                        <h5>Interior Painting</h5>
+                        <p>Flawless wall finishes & modern textures to elevate your living spaces.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="service-card">
+                        <i class="bi bi-building"></i>
+                        <h5>Exterior Painting</h5>
+                        <p>Weatherproof and vibrant coatings to protect and beautify your building.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="service-card">
+                        <i class="bi bi-palette"></i>
+                        <h5>Custom Designs</h5>
+                        <p>Artistic wall patterns, feature walls, and luxury paint effects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERIOR DESIGN -->
+    <section class="section-cream">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <h2 class="text-warning">Interior Design Consultation</h2>
+                    <p class="text-muted">
+                        Our interior designers craft spaces that blend functionality with beauty. Whether you need a cozy living room, a modern kitchen, or a luxury office, we design environments that reflect your personality and lifestyle.
+                    </p>
+                    <a href="https://wa.me/254742082219" target="_blank" class="cta-btn mt-3">
+                        <img src="imgs/wappicon.png" width="22" alt="WhatsApp"> Book a Consultation
+                    </a>
+                </div>
+                <div class="col-lg-6 order-lg-1 text-center" data-aos="fade-right">
+                    <img src="imgs/id1.jpg" class="img-fluid mb-3" alt="Interior Design">
+                    <img src="imgs/id2.jpg" class="img-fluid" alt="Luxury Interiors">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section-light text-center">
+        <div class="container">
+            <h3 class="mb-4 text-warning" data-aos="fade-up">Recent Projects</h3>
+            <div class="row g-3">
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/home.jpeg" class="img-fluid" alt="Home Painting"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/painting apartment.jpg" class="img-fluid" alt="Apartment Painting"></div>
+                <div class="col-md-4" data-aos="zoom-in"><img src="imgs/painting-living-room.jpg" class="img-fluid" alt="Living Room"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg">
-                    <h3 class="footer-title">Connect with Us</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                        <li><a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
+                <div class="col-md">
+                    <h3>Contact</h3>
+                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
                 </div>
                 <div class="col-md">
-                    <h3>Action</h3>
-                    <img src="imgs/frutiger aero.jpeg" height="110" alt="sustainability">
-                    <p>EcoHub, We innovate sustainable resilient infrastructures, integrating green practices.</p>
-                    <a href="about_us.html" class="btn btn-primary">Be part of us</a>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3>Quick Links</h3>
                     <ul class="list-unstyled">
                         <li><a href="about_us.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://daily-matters-matter.blogspot.com/">Blog</a></li>
                     </ul>
-                </div>
-                
-                <div class="col-lg">
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
-                    <p><i class="bi bi-envelope-fill"></i> info@ecosolutionhub.com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +254 742082219</p>
-                    <div class="whatsapp-button">
-                        <a href="https://api.whatsapp.com/send?phone=254728771606" class="btn btn-outline-success">Chat on WhatsApp</a>
-                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
-    
