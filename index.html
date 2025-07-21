@@ -136,6 +136,14 @@
 .horizontal-list li {
     margin-right: 10px; /* Add space between the items */
 }
+:root {
+  --light-green: #e6f4ea; /* Adjust to match your brand if needed */
+}
+
+.themed-section {
+  background: var(--light-green);
+}
+
     </style>
 </head>
 <body>
@@ -184,88 +192,165 @@
         </div>
     </nav>
     <!-- About Us Split Section -->
-<section class="about-section py-5">
-  <div class="container">
+<section class="about-section py-5" 
+         style="position: relative; 
+                background-image: url('imgs/nation.jpg'); 
+                background-attachment: fixed; 
+                background-size: cover; 
+                background-position: center; 
+                color: #fff; 
+                overflow: hidden;">
+  
+  <!-- Overlay -->
+  <div style="position: absolute; 
+              top: 0; 
+              left: 0; 
+              width: 100%; 
+              height: 100%; 
+              background: rgba(0, 0, 0, 0.5);">
+  </div>
+
+  <!-- Content Container -->
+  <div class="container" style="position: relative; z-index: 2;">
     <div class="row align-items-center">
-      <!-- Text Column -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="mb-3">About Us</h2>
-        <p class="lead">
-          We are committed to environmental sustainability through research, strategic planning, innovation, and unified action. Our vision is to define civilization by harmonizing development with ecological stewardship.
+      
+      <!-- Text Content -->
+      <div class="col-md-7 mb-4 mb-md-0" data-aos="fade-right">
+        <h2 class="mb-3" style="font-weight: bold;">About Us</h2>
+        <p class="lead" style="font-size: 1.2rem;">
+          We are committed to environmental sustainability through research, strategic planning, innovation, 
+          and unified action. Our vision is to define civilization by harmonizing development with ecological stewardship.
         </p>
         <a href="about_us.html" 
-   class="btn btn-success mt-3" 
-   style="background: linear-gradient(135deg, #28a745, #5cd65c); 
-          color: #fff; 
-          border: none; 
-          padding: 10px 25px; 
-          font-size: 18px; 
-          font-weight: bold; 
-          border-radius: 50px; 
-          box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
-          transition: all 0.3s ease;">
-   🌿 Learn More
-</a>
-
+           class="btn btn-success mt-3" 
+           style="background: linear-gradient(135deg, #28a745, #5cd65c); 
+                  color: #fff; 
+                  border: none; 
+                  padding: 12px 30px; 
+                  font-size: 18px; 
+                  font-weight: bold; 
+                  border-radius: 50px; 
+                  box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+                  transition: all 0.3s ease;">
+           🌿 Learn More
+        </a>
       </div>
 
-      <!-- Image Column -->
-      <div class="col-md-6">
-        <img src="imgs/nation.jpg" alt="About Us Image" class="img-fluid rounded shadow-sm w-100" />
-      </div>
+      <!-- Spacer -->
+      <div class="col-md-5"></div>
     </div>
   </div>
 </section>
+
 
         <!-- Values Section: Environment, Engineering, Innovation -->
 <!-- Values Section with AOS Animations and White Background -->
-<section class="py-5 bg-white">
+<section class="py-5 themed-section">
   <div class="container">
     <div class="row text-center">
-      
-      <div class="row text-center">
 
-  <div class="col-md" data-aos="fade-up" style="margin-bottom:20px;">
-    <h3 class="mb-2">🌱 Environment</h3>
-    <p class="text-muted">Clean, green, and sustainable living for future generations.</p>
-    <img src="imgs/tr.jpeg" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
-  </div>
-  
-  <div class="col-md" data-aos="fade-down" style="margin-bottom:20px;">
-    <h3 class="mb-2">⚙️ Engineering</h3>
-    <p class="text-muted">Craftsmanship meets function—from welding to design excellence.</p>
-    <img src="imgs/tr2 (1).jpeg" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
-  </div>
-  
-  <div class="col-md" data-aos="fade-left" style="margin-bottom:20px;">
-    <h3 class="mb-2">💡 Innovation</h3>
-    <p class="text-muted">Transforming great visions into meaningful, tangible impact.</p>
-    <img src="imgs/tr333.png" class="img-fluid rounded" style="height:190px; width:auto; max-height:190px; object-fit:cover;">
-  </div>
+      <!-- Environment -->
+      <div class="col-md-4 mb-4">
+        <a href="environment.html" class="explore-card">
+          <div class="card shadow-sm border-0 h-100">
+            <img src="imgs/tr.jpeg" class="card-img-top" alt="Environment" style="height:190px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Environment</h5>
+              <p class="card-text text-muted">Clean, green, and sustainable living for future generations.</p>
+              <span class="explore-text">Explore →</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-</div>
+      <!-- Engineering -->
+      <div class="col-md-4 mb-4">
+        <a href="engineering.html" class="explore-card">
+          <div class="card shadow-sm border-0 h-100">
+            <img src="imgs/tr2 (1).jpeg" class="card-img-top" alt="Engineering" style="height:190px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Engineering</h5>
+              <p class="card-text text-muted">Craftsmanship meets function—from welding to design excellence.</p>
+              <span class="explore-text">Explore →</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-      
+      <!-- Innovation -->
+      <div class="col-md-4 mb-4">
+        <a href="index.html" class="explore-card">
+          <div class="card shadow-sm border-0 h-100">
+            <img src="imgs/tr333.png" class="card-img-top" alt="Innovation" style="height:190px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Innovation</h5>
+              <p class="card-text text-muted">Transforming great visions into meaningful, tangible impact.</p>
+              <span class="explore-text">Explore →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
+
+<style>
+  :root {
+    --light-green: #e6f4ea; /* adjust this to your brand's shade */
+  }
+
+  /* Themed Section Background */
+  .themed-section {
+    background: var(--light-green);
+  }
+
+  /* Card Hover Effects */
+  .explore-card {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+  .explore-card .card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    background: #f6fff8;
+  }
+  .explore-card:hover .card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+  }
+  .explore-text {
+    display: inline-block;
+    margin-top: 10px;
+    color: #071952;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  .explore-card:hover .explore-text {
+    color: #3a7d44;
+  }
+</style>
+
+
 
 
 <!-- CTA: Kenya Water Project -->
 <!-- Split Section: Video + Kenya Water Project -->
-<section class="py-5 bg-white">
+<section class="py-5 themed-section">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- Left Column: Embedded Video -->
       <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" 
-     style="max-width:850px; margin:0 auto;">
-    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
-        <iframe src="https://www.youtube.com/embed/zx04Kl8y4dE" 
-                title="Kenya Water Project" allowfullscreen
-                style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
-        </iframe>
-    </div>
+           style="max-width:850px; margin:0 auto;">
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+            <iframe src="https://www.youtube.com/embed/zx04Kl8y4dE" 
+                    title="Kenya Water Project" allowfullscreen
+                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
+            </iframe>
+        </div>
       </div>
 
       <!-- Right Column: Project Description -->
@@ -273,40 +358,43 @@
         <h2 class="mb-3">Kenya's Water Revolution</h2>
         <p class="lead mb-4">Discover how strategic engineering is transforming water access across Kenya.</p>
         <a href="water-project.html" class="btn btn-water btn-lg rounded-pill">
-    💧 Explore the Project
-</a>
-
+          💧 Explore the Project
+        </a>
       </div>
 
     </div>
   </div>
 </section>
 
+
 <!-- Our Consorts / Partners -->
-<section class="py-5 bg-white">
+<section class="py-5 themed-section">
   <div class="container">
     <h2 class="text-center mb-4">Our Consorts</h2>
     <div class="row justify-content-center align-items-center text-center">
+      
       <div class="col-sm-6 col-md-3 mb-4" data-aos="flip-left">
-  <a href="mtoto ni jamii/index.html">
-    <img src="imgs/mtoto n jamii logo.png" alt="Mtoto Ni Jamii" class="img-fluid" width="150">
-  </a>
-</div>
+        <a href="mtoto ni jamii/index.html">
+          <img src="imgs/mtoto n jamii logo.png" alt="Mtoto Ni Jamii" class="img-fluid" width="150">
+        </a>
+      </div>
 
       <div class="col-sm-6 col-md-3 mb-4">
-    <a href="https://nyotaproject.go.ke/" target="_blank">
-        <img src="imgs/NYOTA LOGO. 10.0. PNG.png" alt="Nyota Project" class="img-fluid" width="600">
-    </a>
-</div>
+        <a href="https://nyotaproject.go.ke/" target="_blank">
+          <img src="imgs/NYOTA LOGO. 10.0. PNG.png" alt="Nyota Project" class="img-fluid" width="600">
+        </a>
+      </div>
 
       <div class="col-sm-6 col-md-3 mb-4">
         <a href="https://iyfkenya.org/" target="_blank">
           <img src="imgs/iyf-full-logo.svg" alt="KEWI" class="img-fluid" width="250">
         </a>
       </div>
+
     </div>
   </div>
 </section>
+
 
         
         
@@ -318,7 +406,7 @@
       <!-- Action & Identity -->
       <div class="col-md-4" data-aos="fade-right">
         <h5 class="text-uppercase mb-3">EcoHub</h5>
-        <img src="imgs/frutiger aero.jpeg" height="100" alt="Eco Sustainability" class="mb-3 rounded shadow-sm">
+        <img src="imgs/frutiger aero.jpeg" height="70" alt="Eco Sustainability" class="mb-3 rounded shadow-sm">
         <p style="font-size: 0.95rem;">
           We innovate sustainable and resilient infrastructures, integrating green practices for a better tomorrow.
         </p>

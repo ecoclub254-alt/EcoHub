@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering & Furniture | EcoHub Solution</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    .navbar {
+      background-color: #071952;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(7,25,82,0.7), rgba(7,25,82,0.7)), 
+                  url('imgs/engineering-furniture-bg.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero-section h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    .hero-section p {
+      max-width: 700px;
+      margin: 15px auto;
+      font-size: 1.15rem;
+      animation: fadeInUp 1.4s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      0% {opacity:0; transform:translateY(-30px);}
+      100% {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeInUp {
+      0% {opacity:0; transform:translateY(30px);}
+      100% {opacity:1; transform:translateY(0);}
+    }
+
+    /* Section Title */
+    .section-title {
+      color: #071952;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Cards */
+    .category-card {
+      background: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .category-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-in-out;
+    }
+    .category-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+    }
+    .category-card i {
+      font-size: 40px;
+      color: #071952;
+      margin-bottom: 15px;
+    }
+    .category-card h5 {
+      font-weight: bold;
+      color: #071952;
+      margin-bottom: 10px;
+    }
+    .category-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #071952;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .category-card a:hover {
+      color: #3a7d44;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #071952;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <h1>Engineering & Furniture</h1>
+    <p>Innovative construction engineering solutions and quality furniture craftsmanship for homes, offices, and communities.</p>
+  </section>
+
+  <!-- Engineering Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Construction Engineering</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="category-card">
+            <i class="fas fa-wrench"></i>
+            <h5>Precision Welding & Fabrication</h5>
+            <p>High-quality welding and fabrication services for durable, custom structures.</p>
+            <a href="precision-welding-and-fabrication.html">Learn More →</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="category-card">
+            <i class="fas fa-bath"></i>
+            <h5>Bathroom & Plumbing</h5>
+            <p>Modern bathroom designs and efficient plumbing solutions.</p>
+            <a href="bathroom-and-plumbing.html">Learn More →</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="category-card">
+            <i class="fas fa-paint-roller"></i>
+            <h5>Painting & Interior Design</h5>
+            <p>Stylish painting and creative interior designs to beautify spaces.</p>
+            <a href="painting-and-interior-design.html">Learn More →</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="category-card">
+            <i class="fas fa-cabinet"></i>
+            <h5>Cabinetry Installation</h5>
+            <p>Custom cabinetry installations with precision and elegance.</p>
+            <a href="cabinetry-installation.html">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Furniture Section -->
+  <section class="py-5" style="background: #e6f4ea;">
+    <div class="container">
+      <h2 class="section-title">Furniture Place</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-couch"></i>
+            <h5>Home Furniture</h5>
+            <p>Comfortable and stylish home furniture for every room.</p>
+            <a href="home-furniture.html">Explore →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-briefcase"></i>
+            <h5>Office Furniture</h5>
+            <p>Ergonomic and functional furniture for professional spaces.</p>
+            <a href="office-furniture.html">Explore →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-school"></i>
+            <h5>School Furniture</h5>
+            <p>Durable and comfortable school furniture for effective learning.</p>
+            <a href="school-furniture.html">Explore →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-utensils"></i>
+            <h5>Bar & Restaurant Furniture</h5>
+            <p>Stylish and practical furniture for dining and entertainment.</p>
+            <a href="bar-and-restaurant-furniture.html">Explore →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-umbrella-beach"></i>
+            <h5>Outdoor Furniture</h5>
+            <p>Weather-resistant furniture perfect for outdoor relaxation.</p>
+            <a href="outdoor-furniture.html">Explore →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="category-card">
+            <i class="fas fa-hospital"></i>
+            <h5>Hospital Supplies</h5>
+            <p>Reliable and functional hospital furniture and medical supplies.</p>
+            <a href="hospital-supplies.html">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <p>© 2025 EcoHub Solution | Engineering Excellence & Quality Furniture</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll Animation
+    const cards = document.querySelectorAll('.category-card');
+    window.addEventListener('scroll', () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          card.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
