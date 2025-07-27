@@ -130,10 +130,45 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero-section">
-    <h1>Engineering & Furniture</h1>
-    <p>Innovative construction engineering solutions and quality furniture craftsmanship for homes, offices, and communities.</p>
-  </section>
+  <section class="hero-section" 
+         style="
+           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                       url('imgs/engineering-furniture-bg.jpg') center/cover no-repeat fixed;
+           color: #fff;
+           text-align: center;
+           padding: 120px 20px;
+           position: relative;
+           overflow: hidden;">
+  <h1 style="font-size: 2.8rem; font-weight: bold; margin-bottom: 15px;">
+    Engineering & Furniture
+  </h1>
+  <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto;">
+    Innovative construction engineering solutions and quality furniture craftsmanship 
+    for homes, offices, and communities.
+  </p>
+</section>
+
+<style>
+  /* Mobile Responsive - Switch to a static background */
+  @media (max-width: 768px) {
+    .hero-section {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('i') center/cover no-repeat !important;
+      background-attachment: scroll !important;
+      padding: 80px 15px !important;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem !important;
+    }
+
+    .hero-section p {
+      font-size: 1rem !important;
+    }
+  }
+</style>
+
 
   <!-- Engineering Section -->
   <section class="py-5">
