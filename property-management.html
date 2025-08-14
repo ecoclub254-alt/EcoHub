@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property Management | EcoHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    
+
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('imgs/pm2.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+      padding: 140px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero-section .btn {
+      padding: 12px 28px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 30px;
+      background: #fff;
+      color: #333;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .hero-section .btn:hover {
+      background: #28a745;
+      color: #fff;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .service-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 300px;
+      text-align: left;
+    }
+
+    .service-box h3 {
+      margin-top: 0;
+      color: #00695c;
+    }
+
+    .service-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('imgs/pm2.jpg') center/cover no-repeat;
+      }
+      .hero-section h1 {
+        font-size: 2.2rem;
+      }
+      .hero-section p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Property Management with Purpose 🌍</h1>
+    <p>From premium properties to pristine estates — we handle sales, rentals, cleaning, security, and sustainable greening with excellence and integrity.</p>
+    <a href="#services" class="btn">🏘️ Explore Our Services</a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <h2>Our Key Services</h2>
+    <p>At EcoHub, we offer reliable and integrated property management solutions tailored for modern estate living and development.</p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>🏠 Property Sales</h3>
+        <p>Explore a curated portfolio of residential and commercial properties. We connect you with high-value assets for personal or investment purposes.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>📦 Property Rentals</h3>
+        <p>Whether you're looking to lease a home or a workspace, we manage smooth rental experiences for both landlords and tenants.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>🧹 Estate Cleaning</h3>
+        <p>Our estate cleaning teams ensure hygienic, beautiful spaces — from gated communities to commercial blocks.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>🛡️ Estate Security</h3>
+        <p>We provide professional security services tailored for estates, including 24/7 surveillance, guards, and emergency response systems.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>🌱 Greening Services</h3>
+        <p>We design and maintain green spaces — gardens, lawns, and vertical landscaping — promoting beauty, ecology, and wellness.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
