@@ -8,85 +8,94 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      color: #333;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                  url('imgs/hom.jpg') center/cover no-repeat fixed;
-    }
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: linear-gradient(rgba(84, 87, 86, 0.6), rgba(87, 99, 110, 0.6)),
+              url('imgs/hom.jpg') center/cover no-repeat fixed;
+}
 
-    .navbar {
-      background: rgba(255, 255, 255, 0.9);
-    }
-    .navbar .nav-link {
-      font-weight: 500;
-    }
+/* Navbar */
+.navbar {
+  background: rgba(23, 157, 247, 0.95); /* deep eco green */
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color: #f8f9fa !important;
+}
+.navbar .nav-link:hover {
+  color: #ffd166 !important; /* golden accent */
+}
 
-    .hero-section {
-      color: #fff;
-      text-align: center;
-      padding: 140px 20px;
-    }
-    .hero-section h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero-section p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .hero-section .btn {
-      padding: 12px 28px;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 30px;
-      background: #fff;
-      color: #333;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 30px;
-      transition: all 0.3s ease;
-    }
-    .hero-section .btn:hover {
-      background: #28a745;
-      color: #fff;
-    }
+/* Hero Section */
+.hero-section {
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffd166; /* golden highlight */
+}
+.hero-section p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e2e8f0;
+}
+.hero-section .btn {
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 30px;
+  background: #ffd166; /* golden button */
+  color: #1a2c52; /* eco green text */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+.hero-section .btn:hover {
+  background: #ffd166;
+  color: #fff;
+}
 
-    .section {
+/* Section */
+.section {
   padding: 80px 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.05); /* subtle transparent layer */
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   margin: 40px auto;
   max-width: 1200px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
+.section h2 {
+  font-size: 2.2rem;
+  color: #f0ec11; /* deep eco green */
+  margin-bottom: 20px;
+}
+.section p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #f8f8f8; /* slate gray */
+}
 
-    .section h2 {
-      font-size: 2.2rem;
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-    .section p {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      font-size: 1.1rem;
-    }
-
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-    .service-box {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
+/* Services */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.service-box {
+  background: #beb5b5;
+  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   padding: 30px;
   width: 300px;
@@ -94,45 +103,39 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+.service-box h3 {
+  margin-top: 0;
+  color: #032de9; /* eco green accent */
+}
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1b1a1b; /* gray text */
+}
+.service-box a {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #2705be;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.service-box a:hover {
+  color: #28a745;
+  text-decoration: underline;
 }
 
-    .service-box h3 {
-      margin-top: 0;
-      color: #215cfc;
-    }
-    .service-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .explore-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: background 0.3s, transform 0.2s;
-    }
-    .explore-btn:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-      .hero-section h1 { font-size: 2.2rem; }
-      .hero-section p { font-size: 1.1rem; }
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 2.2rem; }
+  .hero-section p { font-size: 1.1rem; }
+}
   </style>
 </head>
 <body>
@@ -184,8 +187,8 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <h1>Property Management with Excellence</h1>
-    <p>From premium properties to pristine estates — we handle sales, rentals, cleaning, security, and sustainable greening with excellence and integrity.</p>
+    <h1>Property Management with Intergrity</h1>
+    <p>From premium properties to pristine estates. We handle sales, rentals, cleaning, security, and sustainable greening with excellence and integrity.</p>
     <a href="#services" class="btn">🏘️ Explore Our Services</a>
   </section>
 
@@ -223,7 +226,8 @@
       <div class="service-box">
         <h3>🏗️ Build & Renovate</h3>
         <p>We demolish, design, build, and renovate at the best cost. Expert in sourcing structural & interior materials — metal bars, tiles, gypsum, paints, roofing & more.</p>
-        <a href="hardware.html" class="explore-btn">Explore</a>
+        <a href="hardware.html">Explore →</a>
+
       </div>
     </div>
   </section>
