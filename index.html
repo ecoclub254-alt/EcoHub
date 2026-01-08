@@ -22,10 +22,36 @@
             background-color: #ebeef5;
         }
         
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+        .navbar-toggler {
+  border: none;
+}
 
+.navbar-toggler-icon {
+  filter: none;
+  background-image: none;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
         .centered-div {
             background-color: #fff9e9;
             padding: 20px;
@@ -41,43 +67,20 @@
             padding: 0;
         }
         /* Founder Section */
-.founder-section {
-  padding: 90px 10%;
+/* ===============================
+   STORY BEHIND ECOHUB SECTION
+   =============================== */
+
+.ecohub-story-section {
   background: #ffffff;
 }
 
-.founder-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  gap: 60px;
-  align-items: center;
+.video-wrapper {
+  background: #000;
+  border-radius: 12px;
 }
 
-.founder-text h2 {
-  font-size: 34px;
-  margin-bottom: 10px;
-}
 
-.founder-subtitle {
-  font-weight: 600;
-  color: #2f7d32;
-  margin-bottom: 25px;
-}
-
-.founder-text p {
-  color: #141313;
-  margin-bottom: 15px;
-  line-height: 1.7;
-}
-
-.founder-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
 
 /* Partners Section */
 .partners-section {
@@ -343,8 +346,8 @@
                    font-size: clamp(0.9rem, 1.1vw, 1rem);
                    line-height: 1.6;
                  ">
-                <!-- CONTENT TO REFINE NEXT -->
-                Brief description goes here. Clean, punchy, and aligned with the page.
+                Keeping streets clean, planting trees, managing waste,
+and building safer, vibrant urban environments.
               </p>
 
               <span class="explore-text mt-auto">
@@ -379,8 +382,7 @@
                    font-size: clamp(0.9rem, 1.1vw, 1rem);
                    line-height: 1.6;
                  ">
-                <!-- CONTENT TO REFINE NEXT -->
-                Brief description goes here. Clean, punchy, and aligned with the page.
+                Construction Engineering services and Custom Furniture for Refined Spaces.
               </p>
 
               <span class="explore-text mt-auto">
@@ -415,8 +417,7 @@
                    font-size: clamp(0.9rem, 1.1vw, 1rem);
                    line-height: 1.6;
                  ">
-                <!-- CONTENT TO REFINE NEXT -->
-                Brief description goes here. Clean, punchy, and aligned with the page.
+                Seamless sales, rentals, security, cleaning, and estate services built on trust and quality.
               </p>
 
               <span class="explore-text mt-auto">
@@ -468,56 +469,74 @@
   }
 </style>
 
-<section class="founder-section">
-  <div class="founder-container">
+<section class="ecohub-story-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
 
-    <div class="founder-text">
-      <h2>The Mind Behind EcoHub</h2>
-      <p class="founder-subtitle">
-        Built from experience. Driven by purpose. Focused on sustainable impact.
-      </p>
+      <!-- Video Column -->
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <div class="video-wrapper shadow-sm rounded overflow-hidden">
+          <!-- Replace src with your video or embed iframe -->
+          <video
+            src="videos/ecohub-intro.mp4"
+            controls
+            poster="imgs/video-placeholder.jpg"
+            style="width:100%; height:auto; display:block;">
+          </video>
+        </div>
+      </div>
 
-      <p>
-        EcoHub is built at the intersection of environmental stewardship,
-        infrastructure, digital innovation, and community empowerment.
-      </p>
+      <!-- Text Column -->
+      <div class="col-12 col-lg-6">
+        <h3 class="font-weight-bold mb-3">
+          The Story Behind EcoHub
+        </h3>
 
-      <p>
-        Founded by <strong>Evans Gitau</strong>, a communication strategist and water technician,
-        EcoHub draws from hands-on experience across water systems, media,
-        web development, and grassroots initiatives.
-      </p>
+        <p class="text-muted"
+           style="
+             font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+             line-height: 1.7;
+           ">
+          EcoHub integrates environmental action, infrastructure,
+          and innovation to create sustainable, real-world impact.
+        </p>
 
-      <p>
-        This multidisciplinary foundation allows EcoHub to design solutions that
-        are practical, scalable, and grounded in real-world impact — not theory.
-      </p>
+        <p class="text-muted"
+           style="
+             font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+             line-height: 1.7;
+           ">
+          Founded by <strong>Evans Gitau</strong>, the work is grounded in
+          practice — not theory — shaped by experience across water systems,
+          media, and community initiatives.
+        </p>
 
-      <a href="Evans.html"
-   style="
-     display:inline-flex;
-     align-items:center;
-     gap:8px;
-     padding:12px 26px;
-     background:linear-gradient(135deg, #1e88e5, #1565c0);
-     color:#ffffff;
-     text-decoration:none;
-     font-weight:600;
-     border-radius:30px;
-     box-shadow:0 8px 20px rgba(30,136,229,0.35);
-     transition:all 0.3s ease;
-   "
-   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 28px rgba(21,101,192,0.45)';"
-   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(30,136,229,0.35)';"
->
-  <span style="font-size:14px; opacity:0.9;">⭐</span>
-  View Portfolio
-</a>
+        <a href="Evans.html"
+           style="
+             display:inline-flex;
+             align-items:center;
+             gap:8px;
+             padding:12px 26px;
+             background:#0c0a85;
+             color:#ffffff;
+             text-decoration:none;
+             font-weight:600;
+             border-radius:30px;
+             margin-top:10px;
+             transition:all 0.3s ease;
+           "
+           onmouseover="this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.transform='translateY(0)'"
+        >
+          ⭐ View Portfolio
+        </a>
+      </div>
 
     </div>
-
   </div>
 </section>
+
+
 
 <section class="partners-section">
   <div class="partners-container">
