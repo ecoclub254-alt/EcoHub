@@ -111,59 +111,15 @@
   align-items: center;
 }
 
-.partners-logos img {
-  max-width: 140px;
-  margin: auto;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
+.partner-logo img {
+  max-height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.partners-logos img:hover {
-  opacity: 1;
+.partner-logo:hover img {
+  transform: scale(1.05);
 }
-
-
-        .footer h3 {
-            color: #fff;
-        }
-
-        .footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        .icon-image {
-            max-height: 70px;
-        }
-
-        .whatsapp-button {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-top: 20px;
-        }
-
-        .whatsapp-button img {
-            margin-right: 8px;
-        }
-
         .about-us {
             display: flex;
             align-items: center;
@@ -202,6 +158,41 @@
 .themed-section {
   background: var(--light-green);
 }
+.ecohub-footer {
+  background-color: #0b1f3a;
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-block h4 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.footer-block p {
+  color: #d6e0f0;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #b9c7df;
+  font-size: 0.85rem;
+}
+
 
     </style>
 </head>
@@ -475,14 +466,22 @@ and building safer, vibrant urban environments.
 
       <!-- Video Column -->
       <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-        <div class="video-wrapper shadow-sm rounded overflow-hidden">
-          <!-- Replace src with your video or embed iframe -->
-          <video
-            src="videos/ecohub-intro.mp4"
-            controls
-            poster="imgs/video-placeholder.jpg"
-            style="width:100%; height:auto; display:block;">
-          </video>
+        <div class="video-wrapper shadow-sm rounded overflow-hidden"
+             style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe
+            src="https://www.youtube.com/embed/zx04Kl8y4dE"
+            title="What is Sustainability"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              position:absolute;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+            ">
+          </iframe>
         </div>
       </div>
 
@@ -538,68 +537,96 @@ and building safer, vibrant urban environments.
 
 
 
-<section class="partners-section">
-  <div class="partners-container">
-    <h2>Partners & Collaborators</h2>
-    <p class="partners-intro">
-      EcoHub collaborates with organizations, communities, and institutions
-      aligned with sustainability, innovation, and social impact.
-    </p>
 
-    <div class="partners-logos">
-      <img src="imgs/mtoto n jamii logo.png" alt="Partner Logo">
-      <img src="images/partner2.png" alt="Partner Logo">
-      <img src="images/partner3.png" alt="Partner Logo">
-      <img src="images/partner4.png" alt="Partner Logo">
+<section class="ecohub-partners py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-4">
+      <h3 class="font-weight-bold">
+        Our Partners & Collaborators
+      </h3>
+      <p class="text-muted"
+         style="max-width:700px; margin:0 auto;">
+        We collaborate with organizations, institutions, and initiatives
+        aligned with sustainability, innovation, and community impact.
+      </p>
+    </div>
+
+    <!-- Partner Logos -->
+    <div class="row justify-content-center align-items-center g-4">
+
+      <!-- Partner 1 -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+        <a href="http://127.0.0.1:5500/mtoto%20ni%20jamii/index.html"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-logo">
+          <img src="imgs/mtoto n jamii logo.png"
+               alt="Mtoto Ni Jamii"
+               class="img-fluid">
+        </a>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+        <a href="https://kabilayetunikenya.github.io/Kabila-yetu-ni-Kenya/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-logo">
+          <img src="imgs/kabika kenya.jpeg"
+               alt="KNYNK"
+               class="img-fluid">
+        </a>
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+        <a href="https://freeacademy.iyfkenya.org/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="partner-logo">
+          <img src="imgs/iyf-full-logo.svg"
+               alt="IYF"
+               class="img-fluid">
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
 
+    <footer class="ecohub-footer">
+  <div class="footer-container">
 
-    <footer class="bg-dark text-light pt-5 pb-4 mt-5">
-  <div class="container">
-    <div class="row gy-4">
-
-      <!-- Action & Identity -->
-      <div class="col-md-4" data-aos="fade-right">
-        <h5 class="text-uppercase mb-3">EcoHub</h5>
-        <img src="imgs/frutiger aero.jpeg" height="70" alt="Eco Sustainability" class="mb-3 rounded shadow-sm">
-        <p style="font-size: 0.95rem;">
-          We innovate sustainable and resilient infrastructures, integrating green practices for a better tomorrow.
-        </p>
-        <a href="about_us.html" class="btn btn-outline-light btn-sm mt-2">Be part of us</a>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-4" data-aos="fade-up">
-        <h6 class="text-uppercase mb-3">Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="about_us.html" class="text-light text-decoration-none d-block mb-2">About Us</a></li>
-          <li><a href="contact.html" class="text-light text-decoration-none d-block mb-2">Contact</a></li>
-          <li><a href="https://daily-matters-matter.blogspot.com/" class="text-light text-decoration-none d-block">Blog</a></li>
-          <a href="Evans.html" class="btn btn-primary btn-lg" 
-   style="background-color:#0c0a85; border:none; border-radius:50px; padding:10px 25px; font-size:1.1rem;">
-   🌟 Portofolio
-</a>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-4" data-aos="fade-left">
-        <h6 class="text-uppercase mb-3">Contact</h6>
-        <p class="mb-2"><i class="bi bi-geo-alt-fill"></i> P.O Box 21075-00100 GPO, Nairobi, Kenya</p>
-        <p class="mb-2"><i class="bi bi-envelope-fill"></i> info@zerahmedia254.com</p>
-        <p class="mb-3"><i class="bi bi-telephone-fill"></i> +254 742 082 219</p>
-        <a href="https://api.whatsapp.com/send?phone=254742082219" class="btn btn-success btn-sm">Chat on WhatsApp</a>
-      </div>
-
+    <div class="footer-block">
+      <h4>Mission</h4>
+      <p>
+        To integrate sustainability, infrastructure, and innovation into
+        practical solutions that create long-term impact for communities.
+      </p>
     </div>
 
-    <!-- Bottom Line -->
-    <hr class="border-secondary mt-5">
-    <div class="text-center small">
-      &copy; <script>document.write(new Date().getFullYear())</script> EcoHub. All rights reserved.
+    <div class="footer-block">
+      <h4>Vision</h4>
+      <p>
+        To become a trusted hub for sustainable development, empowering people,
+        systems, and environments to thrive.
+      </p>
     </div>
+
+    <div class="footer-block">
+      <h4>Contact</h4>
+      <p>
+        Email: <span>info@ecohub.africa</span><br>
+        Location: Nairobi, Kenya
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> EcoHub. All rights reserved.</p>
   </div>
 </footer>
 
