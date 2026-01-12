@@ -1,215 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <title>About Us | EcoHub Solution</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #071952;
-        }
-        .navbar-nav .nav-link {
-            color: #fff !important;
-            font-weight: 500;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Hero Parallax */
-        .hero-section {
-            background: linear-gradient(rgba(7, 25, 82, 0.7), rgba(7, 25, 82, 0.7)),
-                        url('imgs/bdroom.jpg') center/cover no-repeat fixed;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-        .hero-section h1 {
-            font-size: 2.8rem;
-            font-weight: bold;
-            animation: fadeInDown 1.2s ease-in-out;
-        }
-        .hero-section p {
-            max-width: 600px;
-            margin: 15px auto;
-            font-size: 1.15rem;
-            animation: fadeInUp 1.4s ease-in-out;
-        }
+  <title>EcoHub</title>
 
-        @keyframes fadeInDown {
-            0% {opacity: 0; transform: translateY(-30px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeInUp {
-            0% {opacity: 0; transform: translateY(30px);}
-            100% {opacity: 1; transform: translateY(0);}
-        }
+  <!-- Bootstrap -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+        crossorigin="anonymous">
 
-        /* About Content */
-        .about-content {
-            padding: 60px 20px;
-        }
-        .about-content h3 {
-            color: #071952;
-            font-weight: bold;
-        }
-        .about-content p {
-            line-height: 1.7;
-            color: #444;
-        }
-        .highlight-box {
-            background: #b1d0e0;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        .highlight-box h4 {
-            color: #071952;
-        }
-        .highlight-box form .btn {
-            background: #071952;
-            border: none;
-        }
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        /* Our Mission Parallax */
-        .mission-section {
-            background: linear-gradient(rgba(7, 25, 82, 0.6), rgba(7, 25, 82, 0.6)),
-                        url('imgs/mission-bg.jpg') center/cover no-repeat fixed;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-        }
-        .mission-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .mission-section p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
-        /* Footer */
-        .footer {
-            background-color: #071952;
-            color: #fff;
-            padding: 50px 0;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <style>
+    /* Navbar */
+    .navbar {
+      background-color: #f4f3e6;
+    }
+
+    .navbar-nav .nav-link {
+      color: #141414 !important;
+    }
+
+    .navbar-nav .dropdown-menu {
+      background-color: #ebeef5;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 22px;
+      height: 2px;
+      background-color: #0c0a85;
+      position: relative;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      background-color: #0c0a85;
+    }
+
+    .navbar-toggler-icon::before { top: -6px; }
+    .navbar-toggler-icon::after { top: 6px; }
+
+    /* About EcoHub */
+    .about-ecohub {
+      padding: 90px 6%;
+      background: #ffffff;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: #071952;
+      margin-bottom: 20px;
+    }
+
+    .about-lead {
+      font-size: clamp(1rem, 1.3vw, 1.15rem);
+      font-weight: 500;
+      color: #1f2937;
+      margin-bottom: 18px;
+    }
+
+    .about-text p {
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .about-text h4 {
+      margin-top: 25px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #0c0a85;
+      font-weight: 600;
+    }
+
+    .about-pillars {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .about-pillars li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 10px;
+      color: #374151;
+    }
+
+    .about-pillars li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0c0a85;
+      font-weight: bold;
+    }
+
+    .about-closing {
+      font-style: italic;
+      color: #1f2937;
+    }
+
+    .about-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #1e40af, #0c0a85);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 40px;
+      box-shadow: 0 10px 25px rgba(12, 10, 133, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .about-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(12, 10, 133, 0.45);
+      color: #ffffff;
+    }
+
+    .about-frame {
+      width: 100%;
+      height: 360px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .about-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 992px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      .about-frame {
+        height: 280px;
+      }
+    }
+
+    /* Footer */
+    .ecohub-footer {
+      background-color: #0c0a85;
+      padding: 20px 10px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .ecohub-footer p {
+      margin: 0;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light py-3">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">
-                <img src="imgs/ecoeco.png" height="80" alt="EcoSolution Hub Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Construction Engineering
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Furniture Place
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-                            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-                            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-                            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-                            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about_us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>About EcoHub Solution</h1>
-        <p>Engineering with purpose – delivering innovative solutions while advocating for a sustainable future.</p>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="imgs/ecoeco.png" height="80" alt="EcoHub Logo">
+    </a>
 
-    <!-- About Content -->
-    <div class="container about-content">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h3>Who We Are</h3>
-                <p>
-                    Welcome to <strong>EcoHub Solution</strong>, the forefront of professional engineering services, innovation, and advocacy.  
-                    We are dedicated to delivering exceptional solutions while championing environmental sustainability, infrastructure development, and climate action.
-                </p>
-                <p>
-                    At EcoHub, we believe in <strong>engineering with a purpose</strong>. Through our advocacy efforts, we aim to raise awareness, promote sustainable practices, 
-                    and build resilient infrastructure to withstand the challenges of climate change.
-                </p>
-                <p>
-                    With professionalism, innovation, and social responsibility at our core, <strong>EcoHub Solution</strong> is your trusted partner 
-                    in engineering excellence and environmental stewardship.
-                </p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <div class="highlight-box text-center">
-                    <h4>Subscribe to Our Newsletter</h4>
-                    <p>Stay updated with our latest projects, news, and environmental advocacy efforts.</p>
-                    <form action="subscribe.php" method="post" class="form-inline justify-content-center">
-                        <input type="email" class="form-control mr-2" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <!-- Services -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown">
+            Services
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Cleaning</a>
+            <a class="dropdown-item" href="#">Security</a>
+            <a class="dropdown-item" href="#">Cyber Services</a>
+            <a class="dropdown-item" href="#">Sales & Marketing</a>
+            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding</a>
+            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom & Plumbing</a>
+            <a class="dropdown-item" href="painting-and-interior-design.html">Painting & Interior Design</a>
+            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
+          </div>
+        </li>
+
+        <!-- Shop -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-toggle="dropdown">
+            Shop
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="clothing.html">Clothing & Accessories</a>
+            <a class="dropdown-item" href="electronics.html">Electronics</a>
+            <a class="dropdown-item" href="grocery.html">Grocery & Cereals</a>
+            <a class="dropdown-item" href="tools.html">Tools & Equipment</a>
+            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
+            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
+            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
+            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar & Restaurant Furniture</a>
+            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
+            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ABOUT -->
+<section class="about-ecohub">
+  <div class="about-container">
+
+    <div class="about-text" data-aos="fade-right">
+      <h2>About EcoHub</h2>
+
+      <p class="about-lead">
+        EcoHub is a purpose-driven platform integrating environmental action,
+        infrastructure, and innovation to deliver practical, sustainable solutions.
+      </p>
+
+      <p>
+        We operate at the intersection of climate responsibility, engineering,
+        and community-focused development — translating ideas into real-world impact.
+      </p>
+
+      <h4>What EcoHub Represents</h4>
+      <ul class="about-pillars">
+        <li><strong>Eco</strong> — Environmental stewardship</li>
+        <li><strong>Economy</strong> — Resilient systems for growth</li>
+        <li><strong>Empowerment</strong> — Community-enabling infrastructure</li>
+      </ul>
+
+      <p>
+        Founded by <strong>Evans Gitau</strong>, EcoHub is shaped by hands-on experience
+        across public systems, media, technology, and grassroots initiatives.
+      </p>
+
+      <p class="about-closing">
+        EcoHub exists to build what lasts — thoughtfully and collaboratively.
+      </p>
+
+      <a href="Evans.html" class="about-btn">⭐ View Portfolio</a>
     </div>
 
-    <!-- Our Mission Parallax Section -->
-    <section class="mission-section">
-        <h2>Our Mission</h2>
-        <p>
-            To transform communities through sustainable engineering, climate advocacy, and eco-friendly innovations.  
-            We aim to build a future where infrastructure, nature, and human well-being coexist in harmony.
-        </p>
-    </section>
+    <div class="about-visual" data-aos="fade-left">
+      <div class="about-frame">
+        <img src="imgs/about-placeholder.jpg" alt="EcoHub Vision">
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer mt-5">
-        <div class="container text-center">
-            <p>© 2025 EcoHub Solution | Engineering a Sustainable Future</p>
-        </div>
-    </footer>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FOOTER -->
+<footer class="ecohub-footer">
+  <div class="footer-container">
+    <p>&copy; <span id="year"></span> EcoHub. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({ once: true, duration: 800 });
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
