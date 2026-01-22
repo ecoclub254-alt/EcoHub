@@ -159,41 +159,45 @@
 .themed-section {
   background: var(--light-green);
 }
-.ecohub-footer {
-  background-color: #071952;
-  color: #ffffff;
-  padding: 60px 20px 20px;
-  font-size: 0.95rem;
-}
+.footer-glow {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(12, 10, 133, 0.45),
+      transparent
+    );
+    margin-top: 60px;
+    margin-bottom: -1px;
+  }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-}
+  /* Glassmorphism Footer */
+  .ecohub-footer {
+    background: rgba(12, 10, 133, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
 
-.footer-block h4 {
-  margin-bottom: 12px;
-  font-size: 1.05rem;
-  color: #ffffff;
-}
+  .ecohub-footer h5 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
 
-.footer-block p {
-  color: #d6e0f0;
-  line-height: 1.6;
-}
+  .ecohub-footer p {
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 
-.footer-bottom {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
-  color: #b9c7df;
-  font-size: 0.85rem;
-}
+  .ecohub-footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
 
+  .ecohub-footer a:hover {
+    text-decoration: underline;
+  }
 
     </style>
 </head>
@@ -201,7 +205,7 @@
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="imgs/Eco1111.png" height="80" alt="EcoSolution Hub Logo">
+                <img src="imgs/Ecokkk.png" height="100" alt="EcoSolution Hub Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -213,14 +217,11 @@
                             Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                          <a class="dropdown-item" href="precision-welding-and-fabrication.html">Cleaner</a>
-                          <a class="dropdown-item" href="precision-welding-and-fabrication.html">Security</a>
-                          <a class="dropdown-item" href="precision-welding-and-fabrication.html">Cyber Servise</a>
-                          <a class="dropdown-item" href="precision-welding-and-fabrication.html">Sales & Marketing</a>
                             <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
                             <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
                             <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
                             <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
+                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Sales & Marketing</a>
                         </div>
                     </li>
                     <!-- Shop Dropdown -->
@@ -306,7 +307,7 @@
       <div class="col text-center">
         <h2 class="font-weight-bold">Our Focus Areas</h2>
           <p>
-          Practical solutions built around sustainability, infrastructure, and long-term value.
+          Solutions built around sustainability, infrastructure, and long-term value.
         </p>
       </div>
     </div>
@@ -600,37 +601,42 @@ and building safer, vibrant urban environments.
   </div>
 </section>
 
-    <footer class="ecohub-footer">
-  <div class="footer-container">
+    <!-- Soft Glow Divider Above Footer -->
+<div class="footer-glow"></div>
 
-    <div class="footer-block">
-      <h4>Mission</h4>
+<!-- Footer -->
+<footer class="ecohub-footer text-light py-5">
+  <div class="container text-center">
+
+    <!-- Mission -->
+    <div class="mb-4">
+      <h5 class="font-weight-bold">Mission</h5>
       <p>
-        To integrate sustainability, infrastructure, and innovation into
-        practical solutions that create long-term impact for communities.
+        To build sustainable systems where environmental responsibility and infrastructure work together to create lasting value for communities.
       </p>
     </div>
 
-    <div class="footer-block">
-      <h4>Vision</h4>
+    <!-- Vision -->
+    <div class="mb-4">
+      <h5 class="font-weight-bold">Vision</h5>
       <p>
-        To become a trusted hub for sustainable development, empowering people,
-        systems, and environments to thrive.
+        To become a trusted hub for sustainable development, empowering people, systems, and environments to thrive.
       </p>
     </div>
 
-    <div class="footer-block">
-      <h4>Contact</h4>
+    <!-- Contact -->
+    <div class="mb-4">
+      <h5 class="font-weight-bold">Contact</h5>
       <p>
-        Email: <span>info@ecoclub254</span><br>
-        Phone: 07 42 082 219
+        Email: <a href="mailto:info@ecoclub254.com" class="text-light">info@ecoclub254.com</a><br>
+        Phone: <a href="tel:+254742082219" class="text-light">07 42 082 219</a>
       </p>
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> EcoHub. All rights reserved.</p>
+    <!-- Copyright -->
+    <div class="mt-4">
+      <p class="mb-0">&copy; <span id="year"></span> EcoHub. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
@@ -646,6 +652,9 @@ and building safer, vibrant urban environments.
     duration: 1000, 
     once: true      
   });
+</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
