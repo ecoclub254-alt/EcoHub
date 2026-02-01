@@ -1,338 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>EcoHub | About Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>EcoHub</title>
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-        crossorigin="anonymous">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-
-  <style>
-    /* Navbar */
-    .navbar {
-      background-color: #f4f3e6;
-    }
-
-    .navbar-nav .nav-link {
-      color: #141414 !important;
-    }
-
-    .navbar-nav .dropdown-menu {
-      background-color: #ebeef5;
-    }
-
-    .navbar-toggler {
-      border: none;
-    }
-
-    .navbar-toggler-icon {
-      background-image: none;
-      width: 22px;
-      height: 2px;
-      background-color: #0c0a85;
-      position: relative;
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 22px;
-      height: 2px;
-      background-color: #0c0a85;
-    }
-
-    .navbar-toggler-icon::before { top: -6px; }
-    .navbar-toggler-icon::after { top: 6px; }
-    .about-ecohub {
+<style>
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-ecohub {
   position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
   overflow: hidden;
 }
 
-/* Faded logo background */
+/* Background logo */
 .about-ecohub::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("imgs/Ecokkk.png") center/420px no-repeat;
-  opacity: 0.05; /* controls fade strength */
-  pointer-events: none;
+  background: url("imgs/Ecokkk.png") center/560px no-repeat;
+  opacity: 0.12; /* increased visibility */
   z-index: 0;
 }
 
-/* Ensure content stays above logo */
+/* Content container */
 .about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .about-ecohub::before {
-    background-size: 260px;
-    opacity: 0.04;
-  }
+/* Headings */
+.about-container h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #0c0a85;
+  margin-bottom: 22px;
 }
 
+/* Lead text */
+.about-lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+  color: #06111d;
+  line-height: 1.85;
+  margin-bottom: 34px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .about-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-    }
+/* Body text */
+.about-text p {
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.75;
+  color: #06111d;
+  margin-bottom: 20px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .about-text h2 {
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      font-weight: 700;
-      color: #071952;
-      margin-bottom: 20px;
-    }
+/* Pillars list */
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 520px;
+}
 
-    .about-lead {
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
-      font-weight: 500;
-      color: #1f2937;
-      margin-bottom: 18px;
-    }
+.about-text li {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
 
-    .about-text p {
-      color: #374151;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
+/* =========================
+   MISSION & VISION
+========================= */
+.mission-vision {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
 
-    .about-text h4 {
-      margin-top: 25px;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-      color: #0c0a85;
-      font-weight: 600;
-    }
+.mv-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 36px 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.09);
+  backdrop-filter: blur(8px);
+}
 
-    .about-pillars {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 20px;
-    }
+.mv-card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c0a85;
+  margin-bottom: 14px;
+}
 
-    .about-pillars li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 10px;
-      color: #374151;
-    }
+.mv-card p {
+  color: #374151;
+  line-height: 1.75;
+  margin: 0;
+  font-size: 0.95rem;
+}
 
-    .about-pillars li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #0c0a85;
-      font-weight: bold;
-    }
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .about-ecohub {
+    padding: 80px 18px;
+  }
 
-    .about-closing {
-      font-style: italic;
-      color: #1f2937;
-    }
+  .about-ecohub::before {
+    background-size: 340px;
+    opacity: 0.1;
+  }
 
-    .about-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 25px;
-      padding: 12px 28px;
-      background: linear-gradient(135deg, #1e40af, #0c0a85);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 40px;
-      box-shadow: 0 10px 25px rgba(12, 10, 133, 0.35);
-      transition: all 0.3s ease;
-    }
-
-    .about-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(12, 10, 133, 0.45);
-      color: #ffffff;
-    }
-
-    .about-frame {
-      width: 100%;
-      height: 360px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    }
-
-    .about-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @media (max-width: 992px) {
-      .about-container {
-        grid-template-columns: 1fr;
-      }
-      .about-frame {
-        height: 280px;
-      }
-    }
-
-    /* Footer */
-    .ecohub-footer {
-      background-color: #0c0a85;
-      padding: 20px 10px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .ecohub-footer p {
-      margin: 0;
-      color: #e5e7eb;
-      font-size: 0.9rem;
-      letter-spacing: 0.3px;
-    }
-  </style>
+  .mission-vision {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light py-3">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="imgs/Ecokkk.png" height="80" alt="EcoHub Logo">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-
-        <!-- Services -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown">
-            Services
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Cleaning</a>
-            <a class="dropdown-item" href="#">Security</a>
-            <a class="dropdown-item" href="#">Cyber Services</a>
-            <a class="dropdown-item" href="#">Sales & Marketing</a>
-            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding</a>
-            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom & Plumbing</a>
-            <a class="dropdown-item" href="painting-and-interior-design.html">Painting & Interior Design</a>
-            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
-          </div>
-        </li>
-
-        <!-- Shop -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-toggle="dropdown">
-            Shop
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="clothing.html">Clothing & Accessories</a>
-            <a class="dropdown-item" href="electronics.html">Electronics</a>
-            <a class="dropdown-item" href="grocery.html">Grocery & Cereals</a>
-            <a class="dropdown-item" href="tools.html">Tools & Equipment</a>
-            <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-            <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-            <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-            <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar & Restaurant Furniture</a>
-            <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-            <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ABOUT -->
 <section class="about-ecohub">
   <div class="about-container">
 
-    <div class="about-text" data-aos="fade-right">
-      <h2>About EcoHub</h2>
+    <h2>About EcoHub</h2>
 
-      <p class="about-lead">
-        EcoHub is a purpose-driven platform integrating environmental action,
-        infrastructure, and innovation to deliver practical, sustainable solutions.
+    <p class="about-lead">
+      EcoHub is a purpose-driven platform integrating environmental responsibility,
+      infrastructure, and innovation to deliver practical, sustainable solutions.
+    </p>
+
+    <div class="about-text">
+      <p>
+        The work is grounded in lived experience — shaped by hands-on engagement
+        across water systems, media, community initiatives, and development-focused
+        communication.
       </p>
 
       <p>
-        We operate at the intersection of climate responsibility, engineering,
-        and community-focused development — translating ideas into real-world impact.
+        Founded by <strong>Evans Gitau</strong>, EcoHub exists to bridge vision
+        with execution, ensuring sustainability is not abstract, but measurable,
+        scalable, and impactful.
       </p>
 
-      <h4>What EcoHub Represents</h4>
-      <ul class="about-pillars">
-        <li><strong>Eco</strong> — Environmental stewardship</li>
-        <li><strong>Economy</strong> — Resilient systems for growth</li>
-        <li><strong>Empowerment</strong> — Community-enabling infrastructure</li>
+      <ul>
+        <li>• Environmental stewardship & climate-conscious solutions</li>
+        <li>• Infrastructure support & system-based thinking</li>
+        <li>• Communication, media & community empowerment</li>
       </ul>
+    </div>
 
-      <p>
-        Founded by <strong>Evans Gitau</strong>, EcoHub is shaped by hands-on experience
-        across public systems, media, technology, and grassroots initiatives.
-      </p>
+    <!-- Mission & Vision -->
+    <div class="mission-vision">
 
-      <p class="about-closing">
-        EcoHub exists to build what lasts — thoughtfully and collaboratively.
-      </p>
+      <div class="mv-card">
+        <h5>Our Mission</h5>
+        <p>
+          To build sustainable systems where environmental responsibility
+          and infrastructure work together to create lasting value for communities.
+        </p>
+      </div>
 
-      <a href="Evans.html" class="about-btn">⭐ View Portfolio</a>
+      <div class="mv-card">
+        <h5>Our Vision</h5>
+        <p>
+          To become a trusted hub for sustainable development, empowering people,
+          systems, and environments to thrive.
+        </p>
+      </div>
+
     </div>
 
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="ecohub-footer">
-  <div class="footer-container">
-    <p>&copy; <span id="year"></span> EcoHub. All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-  AOS.init({ once: true, duration: 800 });
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
