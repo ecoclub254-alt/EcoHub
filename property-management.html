@@ -17,16 +17,47 @@
 
 /* Navbar */
 .navbar {
-  background: rgba(185, 227, 255, 0.95); /* deep eco green */
-}
-.navbar .nav-link {
-  font-weight: 500;
-  color: #f8f9fa !important;
-}
-.navbar .nav-link:hover {
-  color: #ffd166 !important; /* golden accent */
+            background-color: #f4f3e6;
+        }
+
+        .navbar-nav .nav-link {
+            color: #141414 !important;
+        }
+
+        .navbar-nav .nav-item.dropdown .dropdown-menu {
+            background-color: #ebeef5;
+        }
+        
+        .navbar-toggler {
+  border: none;
 }
 
+.navbar-toggler-icon {
+  filter: none;
+  background-image: none;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
 /* Hero Section */
 .hero-section {
   color: #fff;
