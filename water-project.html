@@ -12,20 +12,47 @@
     <title>Water, Sanitation and Climate Action</title>
     <style>
         .navbar {
-            background-color: #0056b3;
+            background-color: #f4f3e6;
         }
 
         .navbar-nav .nav-link {
-            color: #fff !important;
+            color: #141414 !important;
         }
 
         .navbar-nav .nav-item.dropdown .dropdown-menu {
             background-color: #ebeef5;
         }
         
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
+        .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: none;
+  background-image: none;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: #0c0a85;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
 
         .centered-div {
             background-color: #F5F7F8;

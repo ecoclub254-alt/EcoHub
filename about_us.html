@@ -6,48 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-.navbar {
-            background-color: #f4f3e6;
-        }
-
-        .navbar-nav .nav-link {
-            color: #141414 !important;
-        }
-
-        .navbar-nav .nav-item.dropdown .dropdown-menu {
-            background-color: #ebeef5;
-        }
-        
-        .navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  filter: none;
-  background-image: none;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
-}
-
-.navbar-toggler-icon::before {
-  top: -6px;
-}
-
-.navbar-toggler-icon::after {
-  top: 6px;
-}
 .about-ecohub {
   position: relative;
   padding: 100px 20px;
@@ -61,7 +19,7 @@
   position: absolute;
   inset: 0;
   background: url("imgs/Ecokkk.png") center/560px no-repeat;
-  opacity: 0.12; /* increased visibility */
+  opacity: 0.12;
   z-index: 0;
 }
 
@@ -72,6 +30,11 @@
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+/* Section wrapper */
+.about-section {
+  margin-top: 70px;
 }
 
 /* Headings */
@@ -94,35 +57,21 @@
 }
 
 /* Body text */
-.about-text p {
+.about-body {
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   line-height: 1.75;
   color: #06111d;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Pillars list */
-.about-text ul {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto 0;
-  max-width: 520px;
-}
-
-.about-text li {
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-  color: #1f2937;
 }
 
 /* =========================
    MISSION & VISION
 ========================= */
 .mission-vision {
-  margin-top: 80px;
+  margin-top: 90px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 34px;
@@ -163,68 +112,35 @@
     opacity: 0.1;
   }
 
+  .about-section {
+    margin-top: 55px;
+  }
+
   .mission-vision {
     grid-template-columns: 1fr;
-    margin-top: 60px;
+    margin-top: 65px;
   }
 }
 </style>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light py-3">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">
-                <img src="imgs/Ecokkk.png" height="100" alt="EcoSolution Hub Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Services
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                            <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                            <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                            <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
-                            <a class="dropdown-item" href="precision-welding-and-fabrication.html">Sales & Marketing</a>
-                        </div>
-                    </li>
-                    <!-- Shop Dropdown -->
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Shop
-  </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdownShop">
-    <a class="dropdown-item" href="clothing.html">Clothing & Accessories</a>
-    <a class="dropdown-item" href="electronics.html">Electronics</a>
-    <a class="dropdown-item" href="grocery.html">Grocery & Cereals</a>
-    <a class="dropdown-item" href="tools.html">Tools & Equipment</a>
-    <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-    <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-    <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-    <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-   <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-    <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-    
-    
-    
-  </div>
-</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body>
 
 <section class="about-ecohub">
   <div class="about-container">
+    <div style="
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+">
+  <img src="imgs/Ecokkk.png"
+       alt="EcoHub Logo"
+       style="
+         width: clamp(140px, 22vw, 220px);
+         height: auto;
+       ">
+</div>
+
 
     <h2>About EcoHub</h2>
 
@@ -232,50 +148,53 @@
       EcoHub is a sustainability-driven organization working at the intersection of climate advocacy, engineering, waste management, and community development. We partner with corporates, SMEs, NGOs, and institutions to design and implement practical solutions that balance environmental responsibility with economic and social impact.
     </p>
 
+    <div class="about-section">
       <h2>Who We Are</h2>
-      <p>
+      <p class="about-body">
         EcoHub is a multidisciplinary platform bringing together technical expertise, environmental insight, and community-centered thinking. Our work bridges strategy and execution, helping organizations move from sustainability intentions to measurable action.
-
-We operate with a clear focus: creating solutions that are realistic, scalable, and context-aware, especially within the built environment and emerging economies.
+        <br><br>
+        We operate with a clear focus: creating solutions that are realistic, scalable, and context-aware, especially within the built environment and emerging economies.
       </p>
-
-      <h2>What We Do</h2>
-      <p class="about-lead">
-  <strong>Climate Advocacy</strong><br>
-  We promote climate awareness and action through research, partnerships, and advocacy initiatives that influence responsible decision-making at organizational and community levels.
-  <br><br>
-
-  <strong>Construction & Engineering Services</strong><br>
-  We provide sustainability-informed construction and engineering solutions that prioritize efficiency, durability, and environmental performance across projects.
-  <br><br>
-
-  <strong>Waste Management Solutions</strong><br>
-  From waste reduction strategies to sustainable disposal and recovery systems, we help organizations manage waste responsibly and compliantly.
-  <br><br>
-
-  <strong>Community Initiatives</strong><br>
-  We collaborate with communities to develop programs that support environmental education, local resilience, and inclusive participation in sustainability efforts.
-</p>
-
-<h2>Our Approach</h2>
-
-<p class="about-lead">
-  At <strong>EcoHub</strong>, we are guided by three core principles:
-  <br><br>
-
-  <strong>Practical Sustainability</strong> – Solutions must work in real-world conditions<br>
-  <strong>Collaboration</strong> – Strong outcomes come from strong partnerships<br>
-  <strong>Long-Term Impact</strong> – We design with the future in mind
-  <br><br>
-
-  This approach allows us to deliver outcomes that are not only environmentally sound but also <strong>operationally</strong> and <strong>economically viable</strong>.
-</p>
-
     </div>
 
-    <!-- Mission & Vision -->
-    <div class="mission-vision">
+    <div class="about-section">
+      <h2>What We Do</h2>
 
+      <p class="about-lead">
+        <strong>Climate Advocacy</strong><br>
+        We promote climate awareness and action through research, partnerships, and advocacy initiatives that influence responsible decision-making at organizational and community levels.
+        <br><br>
+
+        <strong>Construction & Engineering Services</strong><br>
+        We provide sustainability-informed construction and engineering solutions that prioritize efficiency, durability, and environmental performance across projects.
+        <br><br>
+
+        <strong>Waste Management Solutions</strong><br>
+        From waste reduction strategies to sustainable disposal and recovery systems, we help organizations manage waste responsibly and compliantly.
+        <br><br>
+
+        <strong>Community Initiatives</strong><br>
+        We collaborate with communities to develop programs that support environmental education, local resilience, and inclusive participation in sustainability efforts.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h2>Our Approach</h2>
+
+      <p class="about-lead">
+        At <strong>EcoHub</strong>, we are guided by three core principles:
+        <br><br>
+
+        <strong>Practical Sustainability</strong> – Solutions must work in real-world conditions<br>
+        <strong>Collaboration</strong> – Strong outcomes come from strong partnerships<br>
+        <strong>Long-Term Impact</strong> – We design with the future in mind
+        <br><br>
+
+        This approach allows us to deliver outcomes that are not only environmentally sound but also <strong>operationally</strong> and <strong>economically viable</strong>.
+      </p>
+    </div>
+
+    <div class="mission-vision">
       <div class="mv-card">
         <h5>Our Mission</h5>
         <p>
@@ -291,11 +210,11 @@ We operate with a clear focus: creating solutions that are realistic, scalable, 
           systems, and environments to thrive.
         </p>
       </div>
-
     </div>
 
   </div>
 </section>
+
 <footer style="
   background: rgba(19, 18, 65, 0.85);
   backdrop-filter: blur(8px);
@@ -312,7 +231,5 @@ We operate with a clear focus: creating solutions that are realistic, scalable, 
   </p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
