@@ -35,21 +35,44 @@ padding:0;
 
 font-family:'Poppins',sans-serif;
 
-background:
-linear-gradient(
-rgba(12,20,14,.82),
-rgba(12,20,14,.82)
-),
-url("images/ecobg1.ppg");
-
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-
-color:white;
+color:#fff;
 
 overflow-x:hidden;
+
+position:relative;
+
+min-height:100vh;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+linear-gradient(
+rgba(12,20,14,.65),
+rgba(12,20,14,.75)
+),
+
+url("images/ecobg1.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+z-index:-2;
 
 }
 
@@ -469,32 +492,33 @@ transform:translateY(0);
 .video-box{
 
 width:100%;
-max-width:520px;
+max-width:650px;
+margin:35px auto;
 
-margin:40px auto;
-
-border-radius:20px;
+border-radius:18px;
 
 overflow:hidden;
 
-box-shadow:0 20px 50px rgba(0,0,0,.45);
+border:3px solid rgba(255,255,255,.15);
+
+box-shadow:0 15px 40px rgba(0,0,0,.4);
 
 }
 
+.video-box img,
 .video-box video{
+
+display:block;
 
 width:100%;
 
-display:block;
+height:auto;
 
 }
 
 </style>
 
 </head>
-<p class="coming">
-🚧 Website Under Construction
-</p>
 
 <body>
 
@@ -507,14 +531,12 @@ display:block;
 </div>
 
 <h1>
-Building Something Amazing
+Building Bridges
 </h1>
 
 <p class="intro">
 
-We're creating a digital hub that connects people,
-organizations, innovators and businesses committed to a
-greener, cleaner and more sustainable future.
+We're building a modern online marketplace that connects businesses with the right customers. Whether you're a startup, local business, service provider, or established brand, our platform will help you showcase your products and services
 
 Stay tuned...
 
@@ -524,7 +546,8 @@ Stay tuned...
 
 <video autoplay muted loop playsinline>
 
-<source src="vids/Under Construction 90S GIF by Marcie LaCerte.gif" type="video/mp4">
+<img src="vids/Under Construction 90S GIF by Marcie LaCerte.gif"
+class="gif">
 
 </video>
 
@@ -534,7 +557,7 @@ Stay tuned...
 
 <p class="coming">
 
-🚧 Website Under Construction
+🚧Under Construction
 
 </p>
 <section class="advertise">
@@ -543,33 +566,27 @@ Stay tuned...
 
 <p>
 
-Your business could be one of the first brands visitors see
-when EcoHub officially launches.
-
-Reach an audience passionate about sustainability,
-innovation, environmental conservation, clean energy,
-climate action and green businesses.
-
-Reserve this premium advertising space today.
+📢 Promote Your Business
+Be among the first businesses featured when we launch. Gain early visibility, connect with potential customers, and grow your brand through targeted marketing and digital promotion. Reserve your spot today and be part of our growing business community.
 
 </p>
 
 <div class="features">
 
 <div class="feature">
-🌱 Green Businesses
+Online Shops & Retailers
 </div>
 
 <div class="feature">
-♻ Sustainability Projects
+Digital Marketing & Advertising
 </div>
 
 <div class="feature">
-🌍 NGOs & Communities
+Business Directory & Networking
 </div>
 
 <div class="feature">
-💼 CSR Campaigns
+Deals, Offers & Featured Listings
 </div>
 
 <div class="feature">
@@ -577,7 +594,7 @@ Reserve this premium advertising space today.
 </div>
 
 <div class="feature">
-📅 Eco Events
+Brand Promotion
 </div>
 
 </div>
