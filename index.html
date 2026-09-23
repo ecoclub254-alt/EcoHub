@@ -236,6 +236,623 @@
   }
 }
     </style>
+
+<style id="ecohub-premium-upgrade">
+/* =========================================================
+   ECOHUB PREMIUM HOMEPAGE UPGRADE
+   Preserves Bootstrap 4.6 + existing page structure
+   ========================================================= */
+
+:root{
+  --eco-navy:#0c0a85;
+  --eco-blue:#071952;
+  --eco-green:#2f7d4a;
+  --eco-forest:#185c3a;
+  --eco-warm:#d89b3d;
+  --eco-warm-soft:rgba(216,155,61,.28);
+  --eco-cream:#fbfaf5;
+  --eco-ink:#101827;
+  --eco-muted:#647080;
+}
+
+/* ---------- Global polish ---------- */
+html{scroll-behavior:smooth;}
+
+body{
+  color:var(--eco-ink);
+  background:#fff;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  transition:color .25s ease, opacity .25s ease;
+}
+
+::selection{
+  background:rgba(216,155,61,.25);
+}
+
+/* ---------- Navigation ---------- */
+.navbar{
+  min-height:86px;
+  background:rgba(244,243,230,.96) !important;
+  border-bottom:1px solid rgba(12,10,133,.07);
+  box-shadow:0 4px 20px rgba(13,25,40,.045);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+.navbar-brand{
+  display:flex;
+  align-items:center;
+  margin-right:2rem;
+}
+
+.navbar-brand img{
+  height:auto !important;
+  max-height:82px;
+  width:auto;
+  max-width:min(220px,55vw);
+  object-fit:contain;
+  transition:transform .3s ease;
+}
+
+.navbar-brand:hover img{
+  transform:translateY(-1px);
+}
+
+.navbar-nav .nav-link{
+  position:relative;
+  color:#141414 !important;
+  font-weight:600;
+  font-size:.96rem;
+  letter-spacing:.01em;
+  padding:.65rem .9rem !important;
+}
+
+.navbar-nav .nav-link::after{
+  transition:transform .25s ease, opacity .25s ease;
+}
+
+.navbar-nav .nav-link:not(.dropdown-toggle)::before{
+  content:"";
+  position:absolute;
+  left:.9rem;
+  right:.9rem;
+  bottom:.32rem;
+  height:2px;
+  border-radius:20px;
+  background:var(--eco-warm);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .25s ease;
+}
+
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::before,
+.navbar-nav .nav-link:not(.dropdown-toggle):focus::before{
+  transform:scaleX(1);
+}
+
+.navbar-nav .dropdown-menu{
+  margin-top:.65rem;
+  padding:.55rem;
+  border:1px solid rgba(12,10,133,.08);
+  border-radius:14px;
+  background:rgba(255,255,255,.98) !important;
+  box-shadow:0 18px 45px rgba(13,25,40,.13);
+}
+
+.navbar-nav .dropdown-item{
+  border-radius:9px;
+  padding:.62rem .8rem;
+  font-size:.9rem;
+  color:#18202c;
+  transition:background .2s ease, color .2s ease, padding-left .2s ease;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus{
+  background:rgba(216,155,61,.12);
+  color:var(--eco-blue);
+  padding-left:1rem;
+}
+
+.navbar-toggler{
+  padding:.45rem .2rem;
+  outline:none !important;
+}
+
+.navbar-toggler:focus{
+  box-shadow:0 0 0 .2rem rgba(216,155,61,.18);
+}
+
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after{
+  background-color:var(--eco-blue);
+}
+
+/* ---------- Hero / About ---------- */
+.about-section{
+  min-height:clamp(440px,60vh,650px);
+  display:flex;
+  align-items:center;
+  background-position:center center !important;
+}
+
+.about-section > div:first-child{
+  background:
+    linear-gradient(90deg,rgba(5,10,24,.78) 0%,rgba(5,10,24,.54) 48%,rgba(5,10,24,.18) 100%) !important;
+}
+
+.about-section .container{
+  padding-top:4rem;
+  padding-bottom:4rem;
+}
+
+.about-section h2{
+  font-size:clamp(2rem,4vw,3.4rem);
+  line-height:1.08;
+  letter-spacing:-.025em;
+  margin-bottom:1.25rem !important;
+}
+
+.about-section p.lead{
+  max-width:760px;
+  font-size:clamp(1rem,1.45vw,1.28rem) !important;
+  line-height:1.8;
+  color:rgba(255,255,255,.94);
+}
+
+.about-section p strong{
+  color:#f4c96b !important;
+  text-shadow:0 0 18px rgba(216,155,61,.32) !important;
+}
+
+.about-section .btn{
+  box-shadow:0 10px 28px rgba(0,0,0,.25) !important;
+  background:linear-gradient(135deg,#2f7d4a,#49a866) !important;
+  padding:13px 28px !important;
+  font-size:1rem !important;
+}
+
+.about-section .btn:hover,
+.about-section .btn:focus{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,0,0,.32),0 0 20px rgba(216,155,61,.18) !important;
+}
+
+/* ---------- Section headings ---------- */
+.services-section{
+  padding-top:clamp(3.5rem,7vw,5.5rem) !important;
+  padding-bottom:clamp(3.5rem,7vw,5.5rem) !important;
+  background:linear-gradient(180deg,#fff 0%,#fbfcfa 100%);
+}
+
+.services-section .row.mb-4{
+  margin-bottom:2.4rem !important;
+}
+
+.services-section h2,
+.ecohub-story-section h3,
+.ecohub-partners h3{
+  color:var(--eco-ink);
+  letter-spacing:-.02em;
+}
+
+.services-section h2{
+  font-size:clamp(1.7rem,3vw,2.35rem);
+}
+
+.services-section .row.mb-4 p{
+  max-width:650px;
+  margin:.7rem auto 0;
+  color:var(--eco-muted);
+  line-height:1.7;
+}
+
+/* ---------- Focus cards: warm premium glow ---------- */
+.explore-card{
+  position:relative;
+  height:100%;
+  display:block;
+  text-decoration:none !important;
+  color:inherit;
+  border-radius:18px;
+  transition:transform .35s cubic-bezier(.2,.75,.25,1);
+}
+
+.explore-card::before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  z-index:0;
+  border-radius:22px;
+  background:var(--eco-warm-soft);
+  filter:blur(25px);
+  opacity:0;
+  transform:translateY(9px) scale(.95);
+  transition:opacity .4s ease,transform .4s ease;
+  pointer-events:none;
+}
+
+.explore-card .card{
+  position:relative;
+  z-index:1;
+  min-height:100%;
+  overflow:hidden;
+  border:1px solid rgba(17,29,43,.07) !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  box-shadow:0 8px 25px rgba(18,30,45,.065) !important;
+  transition:
+    transform .35s cubic-bezier(.2,.75,.25,1),
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.explore-card .card-img-top{
+  height:clamp(190px,19vw,235px) !important;
+  object-fit:cover;
+  transition:transform .55s cubic-bezier(.2,.75,.25,1),filter .35s ease;
+}
+
+.explore-card .card-body{
+  min-height:210px;
+  padding:1.45rem 1.45rem 1.35rem;
+}
+
+.explore-card .card-title{
+  color:var(--eco-ink);
+  font-size:1.18rem;
+  letter-spacing:-.01em;
+  margin-bottom:.8rem;
+}
+
+.explore-card p{
+  margin-bottom:1rem;
+}
+
+.explore-card .explore-text{
+  color:var(--eco-blue);
+  font-weight:700;
+  letter-spacing:.01em;
+  margin-top:auto !important;
+  transition:color .25s ease,transform .25s ease;
+}
+
+.explore-card:hover{
+  transform:translateY(-7px);
+}
+
+.explore-card:hover::before,
+.explore-card:focus-visible::before{
+  opacity:1;
+  transform:translateY(8px) scale(1);
+}
+
+.explore-card:hover .card,
+.explore-card:focus-visible .card{
+  border-color:rgba(216,155,61,.34) !important;
+  box-shadow:
+    0 18px 38px rgba(18,30,45,.10),
+    0 0 28px rgba(216,155,61,.22) !important;
+}
+
+.explore-card:hover .card-img-top,
+.explore-card:focus-visible .card-img-top{
+  transform:scale(1.035);
+  filter:saturate(1.04);
+}
+
+.explore-card:hover .explore-text,
+.explore-card:focus-visible .explore-text{
+  color:#a66b16;
+  transform:translateX(3px);
+}
+
+.explore-card:focus-visible{
+  outline:3px solid rgba(216,155,61,.28);
+  outline-offset:4px;
+}
+
+/* ---------- Story section ---------- */
+.ecohub-story-section{
+  padding-top:clamp(3.5rem,7vw,5.5rem) !important;
+  padding-bottom:clamp(3.5rem,7vw,5.5rem) !important;
+  background:#f8faf8;
+}
+
+.ecohub-story-section .video-wrapper{
+  border-radius:18px !important;
+  box-shadow:0 18px 40px rgba(13,25,40,.11) !important;
+}
+
+.ecohub-story-section h3{
+  font-size:clamp(1.65rem,3vw,2.3rem);
+  margin-bottom:1rem !important;
+}
+
+.ecohub-story-section p{
+  max-width:650px;
+  color:#263241 !important;
+}
+
+.ecohub-story-section a{
+  background:var(--eco-blue) !important;
+  box-shadow:0 8px 20px rgba(12,10,133,.18);
+}
+
+.ecohub-story-section a:hover{
+  box-shadow:0 12px 28px rgba(12,10,133,.24);
+}
+
+/* ---------- Partners ---------- */
+.ecohub-partners{
+  background:#fff;
+  padding-top:clamp(3rem,6vw,4.5rem) !important;
+  padding-bottom:clamp(3rem,6vw,4.5rem) !important;
+}
+
+.ecohub-partners h3{
+  font-size:clamp(1.5rem,2.6vw,2rem);
+}
+
+.ecohub-partners .text-center > p{
+  color:var(--eco-muted);
+  line-height:1.7;
+}
+
+.ecohub-partners .partner-logo{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:105px;
+  padding:16px;
+  border-radius:15px;
+  border:1px solid rgba(17,29,43,.06);
+  background:#fff;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+
+.ecohub-partners .partner-logo img{
+  max-height:75px;
+  max-width:145px;
+  object-fit:contain;
+}
+
+.ecohub-partners .partner-logo:hover,
+.ecohub-partners .partner-logo:focus{
+  transform:translateY(-4px);
+  border-color:rgba(216,155,61,.3);
+  box-shadow:0 12px 28px rgba(18,30,45,.08),0 0 22px rgba(216,155,61,.12);
+}
+
+/* ---------- Footer ---------- */
+.ecohub-footer{
+  background:
+    radial-gradient(circle at 85% 10%,rgba(216,155,61,.10),transparent 30%),
+    linear-gradient(135deg,#131241 0%,#0d1740 100%);
+  padding:clamp(3.5rem,7vw,5rem) 20px 25px;
+}
+
+.footer-container{
+  max-width:1150px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(30px,5vw,65px);
+}
+
+.footer-block h4{
+  font-size:.92rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#f4c96b;
+}
+
+.footer-block p{
+  max-width:360px;
+}
+
+.footer-bottom{
+  max-width:1150px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width:991.98px){
+  .navbar{
+    min-height:76px;
+  }
+
+  .navbar-brand img{
+    max-height:70px;
+  }
+
+  .navbar-nav{
+    padding-top:.7rem;
+    padding-bottom:.5rem;
+  }
+
+  .navbar-nav .nav-link{
+    padding:.75rem .25rem !important;
+  }
+
+  .navbar-nav .nav-link:not(.dropdown-toggle)::before{
+    left:.25rem;
+    right:auto;
+    width:34px;
+  }
+
+  .navbar-nav .dropdown-menu{
+    margin-top:.2rem;
+    box-shadow:none;
+    border-radius:10px;
+  }
+
+  .about-section{
+    min-height:520px;
+  }
+
+  .about-section .container{
+    padding-top:3.2rem;
+    padding-bottom:3.2rem;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:767.98px){
+  .navbar{
+    min-height:72px;
+    padding-top:.35rem !important;
+    padding-bottom:.35rem !important;
+  }
+
+  .navbar-brand{
+    margin-right:1rem;
+  }
+
+  .navbar-brand img{
+    max-height:62px;
+    max-width:180px;
+  }
+
+  .about-section{
+    min-height:500px;
+    background-attachment:scroll !important;
+  }
+
+  .about-section > div:first-child{
+    background:linear-gradient(180deg,rgba(5,10,24,.76),rgba(5,10,24,.62)) !important;
+  }
+
+  .about-section .container{
+    padding-top:3.6rem;
+    padding-bottom:3.6rem;
+  }
+
+  .about-section h2{
+    font-size:clamp(1.95rem,9vw,2.7rem);
+  }
+
+  .about-section p.lead{
+    line-height:1.7;
+  }
+
+  .about-section .btn{
+    width:auto;
+    min-height:48px;
+  }
+
+  .explore-card .card-body{
+    min-height:0;
+    padding:1.3rem 1.25rem 1.25rem;
+  }
+
+  .explore-card .card-img-top{
+    height:210px !important;
+  }
+
+  .ecohub-story-section .row{
+    align-items:stretch !important;
+  }
+
+  .ecohub-story-section .video-wrapper{
+    margin-bottom:.25rem;
+  }
+
+  .ecohub-story-section h3{
+    margin-top:.8rem;
+  }
+
+  .ecohub-partners .row{
+    row-gap:18px;
+  }
+
+  .ecohub-partners .partner-logo{
+    min-height:95px;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:30px;
+  }
+
+  .footer-block p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width:380px){
+  .navbar-brand img{
+    max-width:155px;
+  }
+
+  .about-section{
+    min-height:470px;
+  }
+
+  .about-section .btn{
+    width:100%;
+  }
+
+  .explore-card .card-img-top{
+    height:190px !important;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+
+
+<style id="ecohub-dropdown-layer-fix">
+/* Keep the desktop navigation dropdown above the hero/background layers */
+.navbar{
+  position:relative;
+  z-index:1050;
+}
+
+.navbar .container,
+.navbar .navbar-collapse{
+  position:relative;
+  z-index:1051;
+}
+
+.navbar-nav .dropdown-menu{
+  z-index:1060 !important;
+}
+
+@media (min-width:992px){
+  .navbar{
+    overflow:visible !important;
+  }
+
+  .navbar-collapse{
+    overflow:visible !important;
+  }
+
+  .navbar-nav .dropdown{
+    position:relative;
+  }
+}
+</style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light py-3">
@@ -547,7 +1164,7 @@ and building safer, vibrant urban environments.
              color: #06111d;
            ">
           Founded by <strong>Evans</strong>, the work is grounded in
-          practice, not theory Shaped by experience across water systems,
+          practice, not theory. Shaped by experience across water systems,
           media, and community initiatives.
         </p>
 
@@ -599,29 +1216,17 @@ and building safer, vibrant urban environments.
 
       <!-- Partner 1 -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-        <a href="http://127.0.0.1:5500/mtoto%20ni%20jamii/index.html"
+        <a href="https://mtotonijamii.github.io/mtotonijamii/"
            target="_blank"
            rel="noopener noreferrer"
            class="partner-logo">
-          <img src="imgs/Resh.png"
+          <img src="imgs/MnJlogo.png"
                alt="Mtoto Ni Jamii"
                class="img-fluid">
         </a>
       </div>
 
       <!-- Partner 2 -->
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-        <a href="https://kabilayetunikenya.github.io/Kabila-yetu-ni-Kenya/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="partner-logo">
-          <img src="imgs/kabika kenya.jpeg"
-               alt="KNYNK"
-               class="img-fluid">
-        </a>
-      </div>
-
-      <!-- Partner 3 -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
         <a href="https://freeacademy.iyfkenya.org/"
            target="_blank"
@@ -666,7 +1271,7 @@ and building safer, vibrant urban environments.
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 EcoHub. All rights reserved.</p>
+    <p>© <span id="year">2026</span> EcoHub. All rights reserved.</p>
   </div>
 </footer>
 
