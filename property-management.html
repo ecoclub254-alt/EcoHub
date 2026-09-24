@@ -1,269 +1,1336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Property Management | EcoHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background: linear-gradient(rgba(84, 87, 86, 0.6), rgba(87, 99, 110, 0.6)),
-              url('imgs/hom.jpg') center/cover no-repeat fixed;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Property Management | EcoHub</title>
+
+<style>
+
+/* =========================================================
+   ECOHUB PROPERTY MANAGEMENT
+   Minimal • Classic • Premium • Responsive
+   No Bootstrap
+========================================================= */
+
+:root{
+  --navy:#0c0a85;
+  --deep:#101642;
+  --blue:#1875cc;
+
+  --gold:#d89b3d;
+  --gold-light:#f1c875;
+
+  --green:#315f49;
+  --cream:#f7f6f1;
+
+  --white:#ffffff;
+  --text:#17202b;
+  --muted:#667085;
+
+  --border:rgba(16,22,66,.09);
+
+  --shadow:0 16px 38px rgba(10,20,40,.07);
+
+  --shadow-hover:
+    0 25px 50px rgba(10,20,40,.12),
+    0 0 30px rgba(216,155,61,.17);
 }
 
-/* Navbar */
-.navbar {
-            background-color: #f4f3e6;
-        }
 
-        .navbar-nav .nav-link {
-            color: #141414 !important;
-        }
+/* =========================================================
+   RESET
+========================================================= */
 
-        .navbar-nav .nav-item.dropdown .dropdown-menu {
-            background-color: #ebeef5;
-        }
-        
-        .navbar-toggler {
-  border: none;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-.navbar-toggler-icon {
-  filter: none;
-  background-image: none;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
-  position: relative;
+html{
+  scroll-behavior:smooth;
 }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
+body{
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  background:var(--cream);
+  color:var(--text);
+
+  line-height:1.7;
+
+  overflow-x:hidden;
 }
 
-.navbar-toggler-icon::before {
-  top: -6px;
+img{
+  display:block;
+  max-width:100%;
 }
 
-.navbar-toggler-icon::after {
-  top: 6px;
-}
-/* Hero Section */
-.hero-section {
-  color: #fff;
-  text-align: center;
-  padding: 140px 20px;
-}
-.hero-section h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #ffd166; /* golden highlight */
-}
-.hero-section p {
-  font-size: 1.3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #e2e8f0;
-}
-.hero-section .btn {
-  padding: 12px 28px;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 30px;
-  background: #ffd166; /* golden button */
-  color: #1a2c52; /* eco green text */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  transition: all 0.3s ease;
-}
-.hero-section .btn:hover {
-  background: #ffd166;
-  color: #fff;
+a{
+  color:inherit;
 }
 
-/* Section */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-.section h2 {
-  font-size: 2.2rem;
-  color: #f0ec11; /* deep eco green */
-  margin-bottom: 20px;
-}
-.section p {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  font-size: 1.1rem;
-  color: #f8f8f8; /* slate gray */
+
+/* =========================================================
+   HOME BUTTON
+========================================================= */
+
+.home-button{
+  position:absolute;
+
+  top:28px;
+  left:28px;
+
+  z-index:20;
+
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:10px 17px;
+
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+
+  background:rgba(8,15,45,.5);
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:.86rem;
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
-/* Services */
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-.service-box {
-  background: #beb5b5;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  padding: 30px;
-  width: 300px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
-.service-box h3 {
-  margin-top: 0;
-  color: #032de9; /* eco green accent */
-}
-.service-box p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #1b1a1b; /* gray text */
-}
-.service-box a {
-  margin-top: 15px;
-  font-weight: 600;
-  color: #2705be;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.service-box a:hover {
-  color: #28a745;
-  text-decoration: underline;
+.home-icon{
+  font-size:1rem;
+  line-height:1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section h1 { font-size: 2.2rem; }
-  .hero-section p { font-size: 1.1rem; }
+.home-button:hover{
+  color:#fff;
+
+  background:rgba(216,155,61,.92);
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.2),
+    0 0 25px rgba(216,155,61,.25);
 }
-  </style>
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+
+  min-height:650px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,13,38,.88) 0%,
+      rgba(8,17,43,.67) 48%,
+      rgba(8,17,43,.27) 100%
+    ),
+    url("imgs/hom.jpg")
+    center center / cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:150px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(16,22,66,.75),
+      transparent
+    );
+
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+
+  z-index:2;
+
+  width:min(1100px,calc(100% - 40px));
+
+  margin:0 auto;
+
+  padding:120px 0 100px;
+}
+
+.hero-inner{
+  max-width:780px;
+}
+
+.hero-kicker{
+  display:inline-block;
+
+  margin-bottom:18px;
+
+  color:var(--gold-light);
+
+  font-size:.75rem;
+
+  font-weight:800;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:750px;
+
+  margin-bottom:22px;
+
+  font-size:clamp(2.5rem,6vw,4.8rem);
+
+  line-height:1.04;
+
+  letter-spacing:-1.6px;
+
+  font-weight:800;
+}
+
+.hero-lead{
+  max-width:700px;
+
+  color:rgba(255,255,255,.88);
+
+  font-size:clamp(1rem,2vw,1.25rem);
+
+  line-height:1.75;
+}
+
+.hero-actions{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+
+  margin-top:30px;
+}
+
+.hero-button{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-size:.9rem;
+
+  font-weight:700;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
+
+.hero-button.primary{
+  background:var(--gold);
+
+  color:#171c30;
+
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+
+.hero-button.primary:hover{
+  background:var(--gold-light);
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25),
+    0 0 22px rgba(216,155,61,.25);
+}
+
+.hero-button.secondary{
+  border:1px solid rgba(255,255,255,.38);
+
+  background:rgba(255,255,255,.08);
+
+  color:#fff;
+
+  backdrop-filter:blur(8px);
+}
+
+.hero-button.secondary:hover{
+  background:rgba(255,255,255,.16);
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+  width:min(1100px,calc(100% - 40px));
+
+  margin:0 auto;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section{
+  padding:95px 0;
+}
+
+.section.white{
+  background:#fff;
+}
+
+.section-header{
+  max-width:780px;
+
+  margin-bottom:48px;
+}
+
+.section-label{
+  display:block;
+
+  margin-bottom:10px;
+
+  color:var(--green);
+
+  font-size:.75rem;
+
+  font-weight:800;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+}
+
+.section-title{
+  color:var(--deep);
+
+  font-size:clamp(2rem,4vw,2.8rem);
+
+  line-height:1.15;
+
+  letter-spacing:-.7px;
+
+  font-weight:800;
+}
+
+.section-intro{
+  margin-top:15px;
+
+  color:var(--muted);
+
+  font-size:1rem;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.introduction{
+  display:grid;
+
+  grid-template-columns:
+    1.05fr
+    .95fr;
+
+  gap:75px;
+
+  align-items:center;
+}
+
+.intro-copy p{
+  margin-bottom:18px;
+
+  color:#4b5563;
+
+  font-size:1rem;
+
+  line-height:1.85;
+}
+
+.intro-copy strong{
+  color:var(--deep);
+}
+
+.intro-highlight{
+  padding:25px;
+
+  background:#f5f6f3;
+
+  border-left:3px solid var(--gold);
+
+  color:#394454;
+
+  font-size:.92rem;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-section{
+  background:var(--cream);
+}
+
+.services-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:22px;
+}
+
+.service-box{
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  min-height:290px;
+
+  padding:30px 27px;
+
+  overflow:hidden;
+
+  background:rgba(255,255,255,.94);
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .3s ease,
+    box-shadow .35s ease,
+    border-color .3s ease;
+}
+
+/* Warm glow */
+
+.service-box::after{
+  content:"";
+
+  position:absolute;
+
+  left:12%;
+  right:12%;
+  bottom:-35px;
+
+  height:80px;
+
+  border-radius:50%;
+
+  background:rgba(216,155,61,.24);
+
+  filter:blur(28px);
+
+  opacity:0;
+
+  transition:opacity .35s ease;
+
+  pointer-events:none;
+}
+
+.service-box:hover{
+  transform:translateY(-7px);
+
+  border-color:rgba(216,155,61,.35);
+
+  box-shadow:var(--shadow-hover);
+}
+
+.service-box:hover::after{
+  opacity:1;
+}
+
+.service-icon{
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:22px;
+
+  border-radius:14px;
+
+  background:#f4f5f8;
+
+  font-size:1.45rem;
+
+  position:relative;
+  z-index:2;
+}
+
+.service-box h3{
+  position:relative;
+  z-index:2;
+
+  margin-bottom:11px;
+
+  color:var(--deep);
+
+  font-size:1.16rem;
+
+  line-height:1.35;
+}
+
+.service-box p{
+  position:relative;
+  z-index:2;
+
+  color:var(--muted);
+
+  font-size:.9rem;
+
+  line-height:1.75;
+}
+
+.service-link{
+  position:relative;
+  z-index:2;
+
+  display:inline-block;
+
+  margin-top:auto;
+  padding-top:18px;
+
+  color:var(--navy);
+
+  font-size:.83rem;
+
+  font-weight:700;
+
+  text-decoration:none;
+}
+
+.service-link:hover{
+  color:var(--gold);
+}
+
+
+/* =========================================================
+   PROPERTY APPROACH
+========================================================= */
+
+.approach{
+  background:#fff;
+}
+
+.approach-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:22px;
+}
+
+.approach-card{
+  padding:32px 27px;
+
+  border-top:3px solid var(--gold);
+
+  background:#fafafa;
+
+  border-radius:4px 4px 16px 16px;
+}
+
+.approach-number{
+  margin-bottom:18px;
+
+  color:var(--gold);
+
+  font-size:.75rem;
+
+  font-weight:800;
+
+  letter-spacing:2px;
+}
+
+.approach-card h3{
+  margin-bottom:10px;
+
+  color:var(--deep);
+
+  font-size:1.1rem;
+}
+
+.approach-card p{
+  color:var(--muted);
+
+  font-size:.9rem;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+========================================================= */
+
+.cta{
+  padding:100px 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(216,155,61,.12),
+      transparent 35%
+    ),
+    var(--deep);
+
+  color:#fff;
+
+  text-align:center;
+}
+
+.cta-inner{
+  max-width:800px;
+
+  margin:0 auto;
+}
+
+.cta-label{
+  display:block;
+
+  margin-bottom:14px;
+
+  color:var(--gold-light);
+
+  font-size:.74rem;
+
+  font-weight:800;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+}
+
+.cta h2{
+  margin-bottom:18px;
+
+  font-size:clamp(2rem,4.5vw,3.1rem);
+
+  line-height:1.12;
+
+  letter-spacing:-.7px;
+}
+
+.cta p{
+  max-width:650px;
+
+  margin:0 auto 28px;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:.98rem;
+
+  line-height:1.8;
+}
+
+.cta-button{
+  display:inline-flex;
+
+  padding:12px 24px;
+
+  background:var(--gold);
+
+  color:#171c30;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-size:.9rem;
+
+  font-weight:700;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
+
+.cta-button:hover{
+  color:#171c30;
+
+  background:var(--gold-light);
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.25),
+    0 0 25px rgba(216,155,61,.22);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:22px 15px;
+
+  background:#0a0f32;
+
+  color:#cbd1df;
+
+  text-align:center;
+
+  font-size:.82rem;
+
+  letter-spacing:.25px;
+}
+
+footer strong{
+  color:#fff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:900px){
+
+  .introduction{
+    grid-template-columns:1fr;
+
+    gap:40px;
+  }
+
+  .services-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .approach-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:640px){
+
+  .home-button{
+    top:18px;
+    left:18px;
+
+    padding:9px 14px;
+
+    font-size:.82rem;
+  }
+
+  .container{
+    width:calc(100% - 32px);
+  }
+
+  .hero{
+    min-height:650px;
+
+    background-position:
+      58% center;
+  }
+
+  .hero-content{
+    width:calc(100% - 32px);
+
+    padding:120px 0 85px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.35rem,11vw,3.25rem);
+  }
+
+  .hero-lead{
+    font-size:.98rem;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+  .hero-button{
+    width:auto;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .services-grid,
+  .approach-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-box{
+    min-height:250px;
+  }
+
+  .cta{
+    padding:75px 0;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition-duration:.01ms !important;
+  }
+
+}
+
+</style>
 </head>
+
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light py-3">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">
-        <img src="imgs/Ecokkk.png" height="80" alt="EcoSolution Hub Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Construction Engineering
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-              <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-              <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom & Plumbing</a>
-              <a class="dropdown-item" href="painting-and-interior-design.html">Painting & Interior Design</a>
-              <a class="dropdown-item" href="cabinetry-installation.html">Cabinetry Installation</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              Furniture Place
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-              <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-              <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-              <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-              <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-              <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<header class="hero">
+
+  <a
+    href="index.html"
+    class="home-button"
+    aria-label="Return to EcoHub home"
+  >
+    <span class="home-icon">⌂</span>
+    <span>Home</span>
+  </a>
+
+
+  <div class="hero-content">
+
+    <div class="hero-inner">
+
+      <span class="hero-kicker">
+        Property • Estates • Development
+      </span>
+
+      <h1>
+        Property Management
+        With Integrity.
+      </h1>
+
+      <p class="hero-lead">
+        From premium properties to well-managed estates,
+        EcoHub provides practical property solutions built
+        around reliability, care and long-term value.
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          href="#services"
+          class="hero-button primary"
+        >
+          Explore Services
+        </a>
+
+        <a
+          href="contact.html"
+          class="hero-button secondary"
+        >
+          Get in Touch
+        </a>
+
       </div>
+
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h1>Property Management with Intergrity</h1>
-    <p>From premium properties to pristine estates. We handle sales, rentals, cleaning, security, and sustainable greening with excellence and integrity.</p>
-    <a href="#services" class="btn">🏘️ Explore Our Services</a>
-  </section>
+  </div>
 
-  <!-- Services Section -->
-  <section class="section" id="services">
-    <h2>Our Key Services</h2>
-    <p>At EcoHub, we offer reliable and integrated property management solutions tailored for modern estate living and development.</p>
+</header>
+
+
+<!-- =======================================================
+     INTRODUCTION
+======================================================= -->
+
+<section class="section white">
+
+  <div class="container">
+
+    <div class="introduction">
+
+
+      <div class="intro-copy">
+
+        <span class="section-label">
+          Our Approach
+        </span>
+
+        <h2 class="section-title">
+          Property care that goes beyond the building.
+        </h2>
+
+        <br>
+
+        <p>
+          At <strong>EcoHub</strong>, we offer integrated
+          property management solutions tailored to modern
+          estate living and development.
+        </p>
+
+        <p>
+          Our approach brings together property services,
+          maintenance, cleaning, security, landscaping and
+          construction support to help keep properties
+          functional, attractive and well cared for.
+        </p>
+
+      </div>
+
+
+      <div class="intro-highlight">
+
+        <strong>
+          One platform. Multiple property needs.
+        </strong>
+
+        <br><br>
+
+        From property sales and rentals to estate services,
+        greening and renovation support, our goal is to make
+        property management simpler, more reliable and more
+        sustainable.
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     SERVICES
+======================================================= -->
+
+<section
+  class="section services-section"
+  id="services"
+>
+
+  <div class="container">
+
+
+    <div class="section-header">
+
+      <span class="section-label">
+        What We Offer
+      </span>
+
+      <h2 class="section-title">
+        Integrated property solutions.
+      </h2>
+
+      <p class="section-intro">
+        Practical services designed around the everyday
+        needs of property owners, tenants, estates and
+        development projects.
+      </p>
+
+    </div>
+
 
     <div class="services-grid">
-      <div class="service-box">
-        <h3>🏠 Property Sales</h3>
-        <p>Explore a curated portfolio of residential and commercial properties. We connect you with high-value assets for personal or investment purposes.</p>
-      </div>
 
-      <div class="service-box">
-        <h3>📦 Property Rentals</h3>
-        <p>Whether you're looking to lease a home or a workspace, we manage smooth rental experiences for both landlords and tenants.</p>
-      </div>
 
-      <div class="service-box">
-        <h3>🧹 Estate Cleaning</h3>
-        <p>Our estate cleaning teams ensure hygienic, beautiful spaces — from gated communities to commercial blocks.</p>
-      </div>
+      <!-- PROPERTY SALES -->
 
-      <div class="service-box">
-        <h3>🛡️ Estate Security</h3>
-        <p>We provide professional security services tailored for estates, including 24/7 surveillance, guards, and emergency response systems.</p>
-      </div>
+      <article class="service-box">
 
-      <div class="service-box">
-        <h3>🌱 Greening Services</h3>
-        <p>We design and maintain green spaces — gardens, lawns, and vertical landscaping — promoting beauty, ecology, and wellness.</p>
-      </div>
+        <div>
 
-      <div class="service-box">
-        <h3>🏗️ Build & Renovate</h3>
-        <p>We demolish, design, build, and renovate at the best cost. Expert in sourcing structural & interior materials — metal bars, tiles, gypsum, paints, roofing & more.</p>
-        <a href="hardware.html">Explore →</a>
+          <div class="service-icon">
+            🏠
+          </div>
 
-      </div>
+          <h3>
+            Property Sales
+          </h3>
+
+          <p>
+            Explore a curated portfolio of residential and
+            commercial properties for personal use or
+            investment.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- RENTALS -->
+
+      <article class="service-box">
+
+        <div>
+
+          <div class="service-icon">
+            🔑
+          </div>
+
+          <h3>
+            Property Rentals
+          </h3>
+
+          <p>
+            Supporting smooth rental experiences for both
+            landlords and tenants, from property matching
+            to ongoing management.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CLEANING -->
+
+      <article class="service-box">
+
+        <div>
+
+          <div class="service-icon">
+            ✦
+          </div>
+
+          <h3>
+            Estate Cleaning
+          </h3>
+
+          <p>
+            Reliable cleaning solutions for residential
+            estates, gated communities and commercial
+            properties.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SECURITY -->
+
+      <article class="service-box">
+
+        <div>
+
+          <div class="service-icon">
+            ◈
+          </div>
+
+          <h3>
+            Estate Security
+          </h3>
+
+          <p>
+            Professional security solutions designed around
+            the needs and characteristics of individual
+            estates and properties.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- GREENING -->
+
+      <article class="service-box">
+
+        <div>
+
+          <div class="service-icon">
+            🌱
+          </div>
+
+          <h3>
+            Greening Services
+          </h3>
+
+          <p>
+            Gardens, lawns and landscaping solutions that
+            bring environmental value, beauty and wellness
+            into property spaces.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- BUILD & RENOVATE -->
+
+      <article class="service-box">
+
+        <div>
+
+          <div class="service-icon">
+            ◫
+          </div>
+
+          <h3>
+            Build & Renovate
+          </h3>
+
+          <p>
+            Construction, renovation and material-sourcing
+            support for projects ranging from structural
+            work to interior finishes.
+          </p>
+
+        </div>
+
+
+        <a
+          href="hardware.html"
+          class="service-link"
+        >
+          Explore Hardware & Materials →
+        </a>
+
+      </article>
+
+
     </div>
-  </section>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     PROPERTY MANAGEMENT PRINCIPLES
+======================================================= -->
+
+<section class="section approach">
+
+  <div class="container">
+
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Our Standard
+      </span>
+
+      <h2 class="section-title">
+        Built around care, value and continuity.
+      </h2>
+
+    </div>
+
+
+    <div class="approach-grid">
+
+
+      <article class="approach-card">
+
+        <div class="approach-number">
+          01
+        </div>
+
+        <h3>
+          Reliable Management
+        </h3>
+
+        <p>
+          We focus on dependable services that help
+          properties remain functional, clean and
+          well-maintained.
+        </p>
+
+      </article>
+
+
+      <article class="approach-card">
+
+        <div class="approach-number">
+          02
+        </div>
+
+        <h3>
+          Long-Term Value
+        </h3>
+
+        <p>
+          Good property management protects the value,
+          usability and appeal of a property over time.
+        </p>
+
+      </article>
+
+
+      <article class="approach-card">
+
+        <div class="approach-number">
+          03
+        </div>
+
+        <h3>
+          Sustainable Spaces
+        </h3>
+
+        <p>
+          Through greening and responsible property
+          practices, we consider both people and the
+          environment.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="cta-inner">
+
+      <span class="cta-label">
+        Let's Work Together
+      </span>
+
+      <h2>
+        Have a property project in mind?
+      </h2>
+
+      <p>
+        Whether you are looking to manage, rent, improve,
+        renovate or develop a property, EcoHub can help
+        you explore the right solution.
+      </p>
+
+      <a
+        href="contact.html"
+        class="cta-button"
+      >
+        Contact EcoHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  <p>
+    © 2026
+    <strong>EcoHub</strong>.
+    All rights reserved.
+  </p>
+
+</footer>
+
+
 </body>
 </html>

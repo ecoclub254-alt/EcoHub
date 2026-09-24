@@ -6,230 +6,204 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-.about-ecohub {
-  position: relative;
-  padding: 100px 20px;
-  background: linear-gradient(180deg, #f8fafc, #ffffff);
-  overflow: hidden;
+:root{
+  --eco-blue:#101a4c;
+  --eco-green:#285c45;
+  --eco-gold:#d89b3d;
+  --eco-cream:#f7f5ef;
+  --eco-text:#263238;
+  --eco-muted:#343a46;
 }
 
-/* Background logo */
-.about-ecohub::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("imgs/Ecokkk.png") center/560px no-repeat;
-  opacity: 0.12;
-  z-index: 0;
-}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--eco-text);background:var(--eco-cream);overflow-x:hidden}
 
-/* Content container */
-.about-container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+/* HERO — uses the same homepage hero image: imgs/nation.jpg */
+.about-hero{
+  min-height:70vh;display:flex;align-items:center;justify-content:center;position:relative;
+  padding:110px 20px 90px;text-align:center;color:#fff;isolation:isolate;
+  background:
+    linear-gradient(90deg,rgba(8,18,42,.84),rgba(8,18,42,.52)),
+    url("imgs/nation.jpg") center center/cover no-repeat;
 }
+.about-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.28));z-index:-1}
+.hero-inner{width:min(900px,100%)}
+.hero-kicker{margin:0 0 18px;font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f1c875}
+.hero-inner h1{margin:0;font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.04;font-weight:800;letter-spacing:-1.5px}
+.hero-inner p{max-width:690px;margin:24px auto 0;font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.75;color:rgba(255,255,255,.9)}
 
-/* Section wrapper */
-.about-section {
-  margin-top: 70px;
+.about-main{width:min(1080px,calc(100% - 40px));margin:0 auto;padding:90px 0 100px}
+.intro{max-width:780px;margin:0 auto 85px;text-align:center}
+.eyebrow{display:block;margin-bottom:14px;color:var(--eco-green);font-size:.76rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+.intro h2,.content-section h2,.approach h2{margin:0;color:var(--eco-blue);font-size:clamp(1.8rem,3.5vw,2.65rem);line-height:1.15;font-weight:800;letter-spacing:-.5px}
+.intro p{margin:22px auto 0;max-width:720px;color:var(--eco-muted);font-size:1.05rem;line-height:1.8}
+
+.content-section{padding:0 0 85px}
+.section-heading{margin-bottom:34px}
+.section-heading p{max-width:650px;margin:13px 0 0;color:var(--eco-muted);line-height:1.7}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{background:#fff;border:1px solid rgba(16,26,76,.08);border-radius:14px;padding:28px 22px;min-height:190px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.service:hover{transform:translateY(-4px);border-color:rgba(216,155,61,.38);box-shadow:0 14px 32px rgba(16,26,76,.09),0 0 22px rgba(216,155,61,.13)}
+.service-number{display:block;margin-bottom:25px;color:var(--eco-gold);font-size:.78rem;font-weight:800;letter-spacing:1px}
+.service h3{margin:0 0 10px;color:var(--eco-blue);font-size:1.05rem;line-height:1.35}
+.service p{margin:0;color:var(--eco-muted);font-size:.91rem;line-height:1.65}
+
+.approach{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start;padding:80px 0;border-top:1px solid rgba(16,26,76,.1);border-bottom:1px solid rgba(16,26,76,.1)}
+.approach-copy p{margin:18px 0 0;color:var(--eco-muted);line-height:1.8;max-width:560px}
+.principles{display:grid;gap:12px}
+.principle{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(16,26,76,.09)}
+.principle:last-child{border-bottom:0}
+.principle span{flex:0 0 auto;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(216,155,61,.14);color:var(--eco-gold);font-size:.78rem;font-weight:800}
+.principle h3{margin:2px 0 5px;color:var(--eco-blue);font-size:1rem}
+.principle p{margin:0;color:var(--eco-muted);font-size:.9rem;line-height:1.6}
+
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-top:85px}
+.mv-card{position:relative;padding:38px 34px;background:var(--eco-blue);color:#fff;border-radius:16px;overflow:hidden}
+.mv-card::after{content:"";position:absolute;width:150px;height:150px;right:-65px;bottom:-75px;border-radius:50%;background:rgba(216,155,61,.14)}
+.mv-card h3{margin:0 0 14px;color:#f1c875;font-size:1rem;letter-spacing:1.2px;text-transform:uppercase}
+.mv-card p{position:relative;z-index:1;margin:0;max-width:500px;color:rgba(255,255,255,.88);font-size:1rem;line-height:1.75}
+
+footer{padding:22px 15px;text-align:center;background:#0d153b}
+footer p{margin:0;color:#cbd1df;font-size:.82rem;letter-spacing:.25px}
+footer strong{color:#fff}
+
+@media (max-width:900px){.services{grid-template-columns:repeat(2,1fr)}.approach{grid-template-columns:1fr;gap:35px}}
+@media (max-width:640px){
+  .about-hero{min-height:68vh;padding:95px 18px 75px;background-position:center}
+  .hero-inner h1{letter-spacing:-.8px}
+  .hero-inner p{line-height:1.65;margin-top:19px}
+  .about-main{width:min(calc(100% - 32px),1080px);padding:68px 0 75px}
+  .intro{margin-bottom:65px}
+  .intro p{font-size:.98rem}
+  .content-section{padding-bottom:65px}
+  .services{grid-template-columns:1fr}
+  .service{min-height:auto;padding:24px 21px}
+  .approach{padding:65px 0}
+  .mv{grid-template-columns:1fr;padding-top:65px}
+  .mv-card{padding:31px 25px}
 }
-
-/* Headings */
-.about-container h2 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 800;
-  color: #0c0a85;
-  margin-bottom: 22px;
-}
-
-/* Lead text */
-.about-lead {
-  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
-  color: #06111d;
-  line-height: 1.85;
-  margin-bottom: 34px;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Body text */
-.about-body {
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  line-height: 1.75;
-  color: #06111d;
-  margin-bottom: 22px;
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* =========================
-   MISSION & VISION
+   HOME BUTTON
 ========================= */
-.mission-vision {
-  margin-top: 90px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 34px;
+.home-button{
+  position:absolute;
+  top:28px;
+  left:28px;
+  z-index:5;
+
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:10px 17px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+
+  background:rgba(10,18,42,.45);
+  color:#fff;
+  text-decoration:none;
+
+  font-size:.88rem;
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
-.mv-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  padding: 36px 30px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.09);
-  backdrop-filter: blur(8px);
+.home-button:hover,
+.home-button:focus{
+  color:#fff;
+  text-decoration:none;
+  background:rgba(216,155,61,.88);
+  border-color:rgba(255,255,255,.5);
+  transform:translateY(-2px);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.22),
+    0 0 20px rgba(216,155,61,.25);
 }
 
-.mv-card h5 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #0c0a85;
-  margin-bottom: 14px;
+.home-icon{
+  font-size:1rem;
+  line-height:1;
 }
 
-.mv-card p {
-  color: #374151;
-  line-height: 1.75;
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .about-ecohub {
-    padding: 80px 18px;
+/* Mobile */
+@media (max-width:640px){
+  .home-button{
+    top:18px;
+    left:18px;
+    padding:9px 14px;
+    font-size:.82rem;
   }
-
-  .about-ecohub::before {
-    background-size: 340px;
-    opacity: 0.1;
-  }
-
-  .about-section {
-    margin-top: 55px;
-  }
-
-  .mission-vision {
-    grid-template-columns: 1fr;
-    margin-top: 65px;
-  }
 }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.service{transition:none}}
 </style>
 </head>
 
 <body>
+<section class="about-hero">
 
-<section class="about-ecohub">
-  <div class="about-container">
-    <div style="
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-">
-  <img src="imgs/Ecokkk.png"
-       alt="EcoHub Logo"
-       style="
-         width: clamp(140px, 22vw, 220px);
-         height: auto;
-       ">
-</div>
+  <a href="index.html" class="home-button" aria-label="Return to EcoHub home">
+    <span class="home-icon">⌂</span>
+    <span>Home</span>
+  </a>
 
-
-    <h2>About EcoHub</h2>
-
-    <p class="about-lead">
-      EcoHub is a sustainability-driven organization working at the intersection of climate advocacy, engineering, waste management, and community development. We partner with corporates, SMEs, NGOs, and institutions to design and implement practical solutions that balance environmental responsibility with economic and social impact.
-    </p>
-
-    <div class="about-section">
-      <h2>Who We Are</h2>
-      <p class="about-body">
-        EcoHub is a multidisciplinary platform bringing together technical expertise, environmental insight, and community-centered thinking. Our work bridges strategy and execution, helping organizations move from sustainability intentions to measurable action.
-        <br><br>
-        We operate with a clear focus: creating solutions that are realistic, scalable, and context-aware, especially within the built environment and emerging economies.
-      </p>
-    </div>
-
-    <div class="about-section">
-      <h2>What We Do</h2>
-
-      <p class="about-lead">
-        <strong>Climate Advocacy</strong><br>
-        We promote climate awareness and action through research, partnerships, and advocacy initiatives that influence responsible decision-making at organizational and community levels.
-        <br><br>
-
-        <strong>Construction & Engineering Services</strong><br>
-        We provide sustainability-informed construction and engineering solutions that prioritize efficiency, durability, and environmental performance across projects.
-        <br><br>
-
-        <strong>Waste Management Solutions</strong><br>
-        From waste reduction strategies to sustainable disposal and recovery systems, we help organizations manage waste responsibly and compliantly.
-        <br><br>
-
-        <strong>Community Initiatives</strong><br>
-        We collaborate with communities to develop programs that support environmental education, local resilience, and inclusive participation in sustainability efforts.
-      </p>
-    </div>
-
-    <div class="about-section">
-      <h2>Our Approach</h2>
-
-      <p class="about-lead">
-        At <strong>EcoHub</strong>, we are guided by three core principles:
-        <br><br>
-
-        <strong>Practical Sustainability</strong> – Solutions must work in real-world conditions<br>
-        <strong>Collaboration</strong> – Strong outcomes come from strong partnerships<br>
-        <strong>Long-Term Impact</strong> – We design with the future in mind
-        <br><br>
-
-        This approach allows us to deliver outcomes that are not only environmentally sound but also <strong>operationally</strong> and <strong>economically viable</strong>.
-      </p>
-    </div>
-
-    <div class="mission-vision">
-      <div class="mv-card">
-        <h5>Our Mission</h5>
-        <p>
-          To build sustainable systems where environmental responsibility
-          and infrastructure work together to create lasting value for communities.
-        </p>
-      </div>
-
-      <div class="mv-card">
-        <h5>Our Vision</h5>
-        <p>
-          To become a trusted hub for sustainable development, empowering people,
-          systems, and environments to thrive.
-        </p>
-      </div>
-    </div>
-
+  <div class="hero-inner">
+    <p class="hero-kicker">About EcoHub</p>
+    <h1>Building What Matters. Sustaining What Lasts.</h1>
+    <p>We connect environmental responsibility, infrastructure and innovation to create solutions that work in the real world.</p>
   </div>
 </section>
 
-<footer style="
-  background: rgba(19, 18, 65, 0.85);
-  backdrop-filter: blur(8px);
-  padding: 18px 10px;
-  text-align: center;
-">
-  <p style="
-    margin: 0;
-    font-size: 0.85rem;
-    color: #d1d5db;
-    letter-spacing: 0.3px;
-  ">
-    © 2026 <strong style="color:#ffffff;">EcoHub</strong>. All rights reserved.
-  </p>
-</footer>
+<main class="about-main">
+  <section class="intro">
+    <span class="eyebrow">Who We Are</span>
+    <h2>A practical platform for sustainable development.</h2>
+    <p>EcoHub brings together environmental action, engineering, community initiatives and opportunity. We focus on practical solutions that create lasting value for people, businesses and the environment.</p>
+  </section>
 
+  <section class="content-section">
+    <div class="section-heading">
+      <span class="eyebrow">What We Do</span>
+      <h2>From ideas to action.</h2>
+      <p>Our work is focused on four connected areas.</p>
+    </div>
+    <div class="services">
+      <article class="service"><span class="service-number">01</span><h3>Environment</h3><p>Climate action, waste management and practical environmental initiatives.</p></article>
+      <article class="service"><span class="service-number">02</span><h3>Engineering</h3><p>Construction and engineering solutions designed for efficiency and durability.</p></article>
+      <article class="service"><span class="service-number">03</span><h3>Community</h3><p>Initiatives that support awareness, participation, resilience and shared responsibility.</p></article>
+      <article class="service"><span class="service-number">04</span><h3>Opportunity</h3><p>A growing platform connecting businesses, people and sustainable solutions.</p></article>
+    </div>
+  </section>
+
+  <section class="approach">
+    <div class="approach-copy">
+      <span class="eyebrow">Our Approach</span>
+      <h2>Simple. Practical. Long-term.</h2>
+      <p>We believe sustainability should be useful, measurable and built around real needs. We work through collaboration, practical thinking and solutions designed to last.</p>
+    </div>
+    <div class="principles">
+      <div class="principle"><span>01</span><div><h3>Practical Sustainability</h3><p>Solutions that work beyond the idea stage.</p></div></div>
+      <div class="principle"><span>02</span><div><h3>Collaboration</h3><p>Better outcomes through strong partnerships.</p></div></div>
+      <div class="principle"><span>03</span><div><h3>Long-Term Impact</h3><p>Building with people, systems and the future in mind.</p></div></div>
+    </div>
+  </section>
+
+  <section class="mv">
+    <div class="mv-card"><h3>Our Mission</h3><p>To build sustainable systems where environmental responsibility and infrastructure create lasting value for communities.</p></div>
+    <div class="mv-card"><h3>Our Vision</h3><p>To become a trusted hub for sustainable development, empowering people, systems and environments to thrive.</p></div>
+  </section>
+</main>
+
+<footer><p>© 2026 <strong>EcoHub</strong>. All rights reserved.</p></footer>
 </body>
 </html>

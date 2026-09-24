@@ -1,296 +1,1406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <title>Water, Sanitation and Climate Action</title>
-    <style>
-        .navbar {
-            background-color: #f4f3e6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .navbar-nav .nav-link {
-            color: #141414 !important;
-        }
+<title>Kenya's Water Future | Evans Gitau</title>
 
-        .navbar-nav .nav-item.dropdown .dropdown-menu {
-            background-color: #ebeef5;
-        }
-        
-        .navbar-toggler {
-  border: none;
+<style>
+
+/* =========================================================
+   WATER PROJECT — EVANS GITAU
+   Minimal / Classic / Responsive
+   No Bootstrap required
+========================================================= */
+
+:root{
+  --navy:#0c0a85;
+  --deep-navy:#101642;
+  --blue:#1875cc;
+  --water:#176b87;
+  --green:#285c45;
+
+  --gold:#d89b3d;
+  --gold-light:#f1c875;
+
+  --cream:#f7f6f1;
+  --white:#ffffff;
+
+  --text:#17202b;
+  --muted:#414753;
+
+  --border:rgba(16,22,66,.09);
+
+  --shadow:0 16px 38px rgba(10,20,40,.07);
+
+  --shadow-hover:
+    0 24px 48px rgba(10,20,40,.11),
+    0 0 28px rgba(216,155,61,.15);
 }
 
-.navbar-toggler-icon {
-  filter: none;
-  background-image: none;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
-  position: relative;
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background-color: #0c0a85;
+html{
+  scroll-behavior:smooth;
 }
 
-.navbar-toggler-icon::before {
-  top: -6px;
+body{
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  background:var(--cream);
+  color:var(--text);
+
+  line-height:1.7;
+
+  overflow-x:hidden;
 }
 
-.navbar-toggler-icon::after {
-  top: 6px;
+img{
+  display:block;
+  max-width:100%;
 }
 
-        .centered-div {
-            background-color: #F5F7F8;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .centered-div h3,
-        .centered-div p {
-            color: #151515;
-        }
-
-        .container-fluid {
-            padding: 0;
-        }
-
-        .footer {
-            background-color: #071952;
-            color: #d3d3d3;
-            padding: 50px 0;
-            text-align: left;
-        }
-
-        .footer h3 {
-            color: #fff;
-        }
-
-        .footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-            color: #d3d3d3;
-        }
-
-        .footer a {
-            color: #d3d3d3;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .horizontal-list {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Vertically center items if they vary in height */
-    justify-content: flex-start; /* Align items to the left */
+a{
+  color:inherit;
 }
 
-.horizontal-list li {
-    margin-right: 10px; /* Add space between the items */
+a:focus-visible{
+  outline:3px solid rgba(216,155,61,.55);
+  outline-offset:4px;
 }
 
-    </style>
+
+/* =========================================================
+   HOME BUTTON
+========================================================= */
+
+.home-button{
+  position:absolute;
+
+  top:28px;
+  left:28px;
+
+  z-index:20;
+
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:10px 17px;
+
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:999px;
+
+  background:rgba(8,15,45,.48);
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:.86rem;
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  box-shadow:0 7px 22px rgba(0,0,0,.18);
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.home-icon{
+  font-size:1rem;
+  line-height:1;
+}
+
+.home-button:hover{
+  color:#fff;
+
+  background:rgba(216,155,61,.9);
+
+  border-color:rgba(255,255,255,.55);
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.22),
+    0 0 24px rgba(216,155,61,.24);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+
+  min-height:570px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,13,39,.87) 0%,
+      rgba(5,20,46,.68) 48%,
+      rgba(5,20,46,.25) 100%
+    ),
+    url("imgs/ndakaini-dam1.webp")
+    center center / cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  inset:auto 0 0 0;
+
+  height:130px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(16,22,66,.72),
+      transparent
+    );
+
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+
+  z-index:2;
+
+  width:min(1100px,calc(100% - 40px));
+
+  margin:0 auto;
+
+  padding:120px 0 90px;
+}
+
+.hero-inner{
+  max-width:760px;
+}
+
+.hero-kicker{
+  display:inline-block;
+
+  margin-bottom:17px;
+
+  color:var(--gold-light);
+
+  font-size:.76rem;
+
+  font-weight:800;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin-bottom:22px;
+
+  font-size:clamp(2.4rem,6vw,4.8rem);
+
+  line-height:1.05;
+
+  letter-spacing:-1.5px;
+
+  font-weight:800;
+}
+
+.hero-lead{
+  max-width:690px;
+
+  color:rgba(255,255,255,.87);
+
+  font-size:clamp(1rem,2vw,1.25rem);
+
+  line-height:1.75;
+}
+
+.hero-note{
+  margin-top:25px;
+
+  padding-left:17px;
+
+  border-left:3px solid var(--gold);
+
+  color:rgba(255,255,255,.7);
+
+  font-size:.88rem;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+  width:min(1100px,calc(100% - 40px));
+
+  margin:0 auto;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section{
+  padding:95px 0;
+}
+
+.section-white{
+  background:#fff;
+}
+
+.section-header{
+  margin-bottom:48px;
+}
+
+.section-label{
+  display:block;
+
+  margin-bottom:10px;
+
+  color:var(--green);
+
+  font-size:.75rem;
+
+  font-weight:800;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+}
+
+.section-title{
+  max-width:800px;
+
+  color:var(--deep-navy);
+
+  font-size:clamp(1.9rem,4vw,2.8rem);
+
+  line-height:1.15;
+
+  letter-spacing:-.7px;
+
+  font-weight:800;
+}
+
+.section-intro{
+  max-width:720px;
+
+  margin-top:15px;
+
+  color:var(--muted);
+
+  font-size:1rem;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   STRATEGIC VISION
+========================================================= */
+
+.vision-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(350px,.9fr);
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.vision-copy p{
+  color:#394454;
+
+  font-size:1rem;
+
+  line-height:1.85;
+}
+
+.vision-copy strong{
+  color:var(--deep-navy);
+}
+
+.vision-list{
+  margin-top:25px;
+
+  list-style:none;
+}
+
+.vision-list li{
+  position:relative;
+
+  padding:11px 0 11px 28px;
+
+  color:#344054;
+
+  font-size:.95rem;
+
+  border-bottom:1px solid rgba(16,22,66,.08);
+}
+
+.vision-list li::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:20px;
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+}
+
+.collaboration{
+  margin-top:25px;
+
+  padding:17px 20px;
+
+  background:#f3f5f7;
+
+  border-left:3px solid var(--green);
+
+  color:#394454;
+
+  font-size:.9rem;
+}
+
+.collaboration strong{
+  color:var(--deep-navy);
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-card{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#0c1434;
+
+  border-radius:20px;
+
+  box-shadow:0 20px 45px rgba(10,20,40,.14);
+}
+
+.video-wrapper{
+  position:relative;
+
+  width:100%;
+
+  aspect-ratio:16 / 10;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  border:0;
+}
+
+.video-caption{
+  padding:18px 20px;
+
+  color:rgba(255,255,255,.75);
+
+  font-size:.82rem;
+}
+
+
+/* =========================================================
+   WATER TRANSFORMATION
+========================================================= */
+
+.transformation{
+  background:
+    linear-gradient(
+      135deg,
+      #f7f8f5,
+      #ffffff
+    );
+}
+
+.transformation-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(0,1fr);
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.transformation-copy h3{
+  margin-bottom:18px;
+
+  color:var(--deep-navy);
+
+  font-size:clamp(1.5rem,3vw,2rem);
+
+  line-height:1.25;
+}
+
+.transformation-copy p{
+  margin-bottom:17px;
+
+  color:#4b5563;
+
+  font-size:.96rem;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   PARTNERS
+========================================================= */
+
+.partner-area{
+  padding:30px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  box-shadow:var(--shadow);
+}
+
+.partner-title{
+  margin-bottom:25px;
+
+  color:var(--deep-navy);
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  text-align:center;
+}
+
+.partner-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:15px;
+}
+
+.partner{
+  min-height:100px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:15px;
+
+  background:#fafafa;
+
+  border:1px solid rgba(16,22,66,.07);
+
+  border-radius:12px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.partner:hover{
+  transform:translateY(-4px);
+
+  border-color:rgba(216,155,61,.35);
+
+  box-shadow:
+    0 12px 28px rgba(10,20,40,.08),
+    0 0 18px rgba(216,155,61,.1);
+}
+
+.partner img{
+  max-width:100%;
+
+  max-height:68px;
+
+  width:auto;
+
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   SPOTLIGHT
+========================================================= */
+
+.spotlight-section{
+  background:var(--cream);
+}
+
+.spotlight-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:22px;
+}
+
+.spotlight-card{
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  overflow:hidden;
+
+  min-height:390px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+
+  transition:
+    transform .3s ease,
+    box-shadow .35s ease,
+    border-color .3s ease;
+}
+
+.spotlight-card::after{
+  content:"";
+
+  position:absolute;
+
+  left:10%;
+  right:10%;
+  bottom:-25px;
+
+  height:70px;
+
+  border-radius:50%;
+
+  background:rgba(216,155,61,.22);
+
+  filter:blur(25px);
+
+  opacity:0;
+
+  transition:opacity .35s ease;
+
+  pointer-events:none;
+}
+
+.spotlight-card:hover{
+  transform:translateY(-7px);
+
+  border-color:rgba(216,155,61,.35);
+
+  box-shadow:var(--shadow-hover);
+}
+
+.spotlight-card:hover::after{
+  opacity:1;
+}
+
+.spotlight-image{
+  width:100%;
+
+  height:190px;
+
+  object-fit:cover;
+}
+
+.spotlight-content{
+  position:relative;
+
+  z-index:2;
+
+  display:flex;
+  flex-direction:column;
+
+  flex:1;
+
+  padding:25px;
+}
+
+.spotlight-label{
+  margin-bottom:8px;
+
+  color:var(--gold);
+
+  font-size:.7rem;
+
+  font-weight:800;
+
+  letter-spacing:1.8px;
+
+  text-transform:uppercase;
+}
+
+.spotlight-content h3{
+  margin-bottom:10px;
+
+  color:var(--deep-navy);
+
+  font-size:1.12rem;
+
+  line-height:1.35;
+}
+
+.spotlight-content p{
+  color:var(--muted);
+
+  font-size:.9rem;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.closing{
+  padding:100px 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(216,155,61,.1),
+      transparent 35%
+    ),
+    var(--deep-navy);
+
+  color:#fff;
+
+  text-align:center;
+}
+
+.closing-inner{
+  max-width:820px;
+
+  margin:0 auto;
+}
+
+.closing-label{
+  display:block;
+
+  margin-bottom:14px;
+
+  color:var(--gold-light);
+
+  font-size:.74rem;
+
+  font-weight:800;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+}
+
+.closing h2{
+  margin-bottom:20px;
+
+  font-size:clamp(2rem,4.5vw,3.2rem);
+
+  line-height:1.12;
+
+  letter-spacing:-.8px;
+}
+
+.closing p{
+  color:rgba(255,255,255,.74);
+
+  font-size:1rem;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:23px 15px;
+
+  background:#0a0f32;
+
+  color:#cbd1df;
+
+  text-align:center;
+
+  font-size:.82rem;
+
+  letter-spacing:.25px;
+}
+
+footer strong{
+  color:#fff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:900px){
+
+  .hero{
+    min-height:540px;
+  }
+
+  .vision-grid,
+  .transformation-grid{
+    grid-template-columns:1fr;
+
+    gap:45px;
+  }
+
+  .spotlight-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .spotlight-card:last-child{
+    grid-column:1 / -1;
+
+    max-width:calc(50% - 11px);
+
+    margin:0 auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:640px){
+
+  .home-button{
+    top:18px;
+    left:18px;
+
+    padding:9px 14px;
+
+    font-size:.82rem;
+  }
+
+  .container{
+    width:calc(100% - 32px);
+  }
+
+  .hero{
+    min-height:610px;
+
+    background-position:
+      58% center;
+  }
+
+  .hero-content{
+    width:calc(100% - 32px);
+
+    padding:
+      115px
+      0
+      80px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.25rem,11vw,3.2rem);
+  }
+
+  .hero-lead{
+    font-size:.98rem;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .section-header{
+    margin-bottom:34px;
+  }
+
+  .vision-grid,
+  .transformation-grid{
+    gap:35px;
+  }
+
+  .partner-area{
+    padding:22px 17px;
+  }
+
+  .partner-grid{
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+  }
+
+  .partner{
+    min-height:85px;
+
+    padding:10px;
+  }
+
+  .partner img{
+    max-height:55px;
+  }
+
+  .spotlight-grid{
+    grid-template-columns:1fr;
+  }
+
+  .spotlight-card:last-child{
+    grid-column:auto;
+
+    max-width:none;
+
+    margin:0;
+  }
+
+  .spotlight-card{
+    min-height:0;
+  }
+
+  .spotlight-image{
+    height:205px;
+  }
+
+  .closing{
+    padding:75px 0;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition-duration:.01ms !important;
+  }
+
+}
+.video-wrapper{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 10;
+  overflow:hidden;
+  background:#080d24;
+}
+
+.video-wrapper video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+</style>
 </head>
+
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light py-3">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <img src="imgs/Ecokkk.png" height="100" alt="EcoSolution Hub Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Construction Engineering
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="precision-welding-and-fabrication.html">Precision Welding and Fabrication</a>
-                  <a class="dropdown-item" href="bathroom-and-plumbing.html">Bathroom &amp; Plumbing</a>
-                  <a class="dropdown-item" href="painting-and-interior-design.html">Painting &amp; Interior Design</a>
-                  <a class="dropdown-item" href="cabinetry-installation.html">cabinetry installation</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Furniture Place
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="home-furniture.html">Home Furniture</a>
-                  <a class="dropdown-item" href="office-furniture.html">Office Furniture</a>
-                  <a class="dropdown-item" href="school-furniture.html">School Furniture</a>
-                  <a class="dropdown-item" href="bar-and-restaurant-furniture.html">Bar and Restaurant Furniture</a>
-                  <a class="dropdown-item" href="outdoor-furniture.html">Outdoor Furniture</a>
-                  <a class="dropdown-item" href="hospital-supplies.html">Hospital Supplies</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about_us.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <header class="text-white" style="background-image: url('imgs/ndakaini-dam1.webp'); background-size: cover; background-position: center; height: 180px;">
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<header class="hero">
+
+  <a
+    href="index.html"
+    class="home-button"
+    aria-label="Return to EcoHub home"
+  >
+    <span class="home-icon">⌂</span>
+    <span>Home</span>
+  </a>
+
+
+  <div class="hero-content">
+
+    <div class="hero-inner">
+
+      <span class="hero-kicker">
+        Water • Resilience • Sustainability
+      </span>
+
+      <h1>
+        Kenya's Water Future
+        Starts With Resilience.
+      </h1>
+
+      <p class="hero-lead">
+        A strategic vision for water security, resilient
+        infrastructure, environmental responsibility and
+        inclusive access.
+      </p>
+
+      <p class="hero-note">
+        A personal water-sector perspective informed by
+        professional experience and a commitment to
+        sustainable development.
+      </p>
+
+    </div>
+
+  </div>
+
 </header>
-<section class="py-5 bg-light">
+
+
+<!-- =======================================================
+     STRATEGIC VISION
+======================================================= -->
+
+<section class="section section-white">
+
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h4>Strategic Vision</h4>
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Strategic Vision
+      </span>
+
+      <h2 class="section-title">
+        From water challenges to resilient systems.
+      </h2>
+
+      <p class="section-intro">
+        My experience with Nairobi City Water and Sewerage
+        Company gave me a first-hand view of the challenges
+        and opportunities surrounding sustainable water
+        management.
+      </p>
+
+    </div>
+
+
+    <div class="vision-grid">
+
+      <div class="vision-copy">
+
         <p>
-          During my time with Nairobi City Water and Sewerage Company, I witnessed first-hand the challenges and opportunities in sustainable water management. Inspired by this, I now advocate for scalable, resilient, and inclusive strategies that align with Kenya’s Vision 2030 and the Water Sector Investment Plan.
+          That experience continues to shape my interest in
+          scalable, resilient and inclusive approaches to
+          water management.
         </p>
-        <ul>
-          <li>Resilience through infrastructure</li>
-          <li>Youth and community empowerment</li>
-          <li>Integrated environmental planning</li>
+
+        <ul class="vision-list">
+
+          <li>
+            Resilience through infrastructure
+          </li>
+
+          <li>
+            Youth and community empowerment
+          </li>
+
+          <li>
+            Integrated environmental planning
+          </li>
+
         </ul>
-        <p><strong>Target Collaboration:</strong> Athi Water Works, NCWSC, Ministry of Water, NIA</p>
+
+        <div class="collaboration">
+
+          <strong>Target Collaboration:</strong>
+
+          Athi Water Works,
+          Nairobi City Water and Sewerage Company,
+          Ministry of Water,
+          National Irrigation Authority
+
+        </div>
+
       </div>
-      <div class="col-lg-6 text-center">
-        <div style="max-width: 500px; border-radius: 12px; overflow: hidden;">
-  <iframe width="100%" height="280" 
-          src="https://www.youtube.com/embed/Pv0kvL-LjdU" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
+
+
+      <div class="video-card">
+
+  <div class="video-wrapper">
+
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    poster="imgs/ndakaini-dam1.webp"
+  >
+    <source src="vids/water.mp4">
+
+    Your browser does not support HTML5 video.
+  </video>
+
 </div>
 
-      </div>
-    </div>
-  </div>
 </section>
-<section class="py-5 bg-light">
+
+
+<!-- =======================================================
+     WATER TRANSFORMATION + PARTNERS
+======================================================= -->
+
+<section class="section transformation">
+
   <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Text Left -->
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-        <h4 class="mb-3">Transforming Water for a Resilient Kenya</h4>
-        <p style="line-height: 1.7;">
-          The Ministry of Water and Sanitation (MWS) is currently undertaking an ambitious agenda for the Kenya water sector through a long-term, transformational program aimed at building water security and climate resilience for economic growth and social well-being.
+
+    <div class="transformation-grid">
+
+
+      <div class="transformation-copy">
+
+        <span class="section-label">
+          Water Security
+        </span>
+
+        <h3>
+          Transforming Water for a Resilient Kenya
+        </h3>
+
+        <p>
+          The Ministry of Water and Sanitation has been
+          associated with a long-term transformational agenda
+          for Kenya's water sector, focused on water security
+          and climate resilience for economic growth and
+          social well-being.
         </p>
-        <p style="line-height: 1.7;">
-          This is in recognition of water as an enabler for the achievement of the Government’s Big Four Agenda and improved livelihoods for all.
+
+        <p>
+          Water is also an important enabler of improved
+          livelihoods and broader development goals.
         </p>
+
       </div>
-      <!-- Partners Right -->
-      <div class="col-lg-6 text-center">
-        <h5 class="mb-4" data-aos="fade-left">Key Sector Partners</h5>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="https://www.nairobiwater.co.ke/" target="_blank" data-aos="zoom-in" data-aos-delay="100">
-            <img src="imgs/NCWSC.jpeg" alt="Nairobi Water" width="90" style="border-radius: 8px;">
+
+
+      <div class="partner-area">
+
+        <h4 class="partner-title">
+          Key Sector Partners
+        </h4>
+
+        <div class="partner-grid">
+
+
+          <a
+            href="https://www.nairobiwater.co.ke/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner"
+            aria-label="Nairobi City Water and Sewerage Company"
+          >
+
+            <img
+              src="imgs/NCWSC.jpeg"
+              alt="Nairobi Water"
+            >
+
           </a>
-          <a href="https://www.awwda.go.ke/" target="_blank" data-aos="zoom-in" data-aos-delay="200">
-            <img src="imgs/arthiwater.jpeg" alt="Athi Water" width="110" style="border-radius: 8px;">
+
+
+          <a
+            href="https://www.awwda.go.ke/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner"
+            aria-label="Athi Water Works Development Agency"
+          >
+
+            <img
+              src="imgs/arthiwater.jpeg"
+              alt="Athi Water"
+            >
+
           </a>
-          <a href="https://waterauthority.go.ke/" target="_blank" data-aos="zoom-in" data-aos-delay="300">
-            <img src="imgs/Approvd-final-small (1).png" alt="Water Authority" width="230" style="border-radius: 8px;">
+
+
+          <a
+            href="https://waterauthority.go.ke/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner"
+            aria-label="Water Resources Authority"
+          >
+
+            <img
+              src="imgs/Approvd-final-small (1).png"
+              alt="Water Resources Authority"
+            >
+
           </a>
-          <a href="https://www.irrigationauthority.go.ke/" target="_blank" data-aos="zoom-in" data-aos-delay="400">
-            <img src="imgs/nationalirigation.png" alt="National Irrigation Authority" width="264" style="border-radius: 8px;">
+
+
+          <a
+            href="https://www.irrigationauthority.go.ke/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner"
+            aria-label="National Irrigation Authority"
+          >
+
+            <img
+              src="imgs/nationalirigation.png"
+              alt="National Irrigation Authority"
+            >
+
           </a>
+
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
-<section class="py-5 bg-white">
+
+
+<!-- =======================================================
+     SPOTLIGHT INITIATIVES
+======================================================= -->
+
+<section class="section spotlight-section">
+
   <div class="container">
-    <h4 class="mb-4 text-center">Spotlight Initiatives</h4>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="imgs/canter.jpg" class="card-img-top" alt="Water Trucking">
-          <div class="card-body">
-            <h5 class="card-title">Nairobi's Water Access Challenges</h5>
-            <p class="card-text">Water trucking remains a key intervention in informal settlements. There's urgent need for piped infrastructure in underserved areas.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="imgs/water-project.png" class="card-img-top" alt="Sanitation Innovation">
-          <div class="card-body">
-            <h5 class="card-title">Water + Sanitation Synergy</h5>
-            <p class="card-text">Community-led sanitation drives have helped reduce contamination in Nairobi River Basin. Innovation meets participation.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="imgs/environment-impact.png" class="card-img-top" alt="Climate Action">
-          <div class="card-body">
-            <h5 class="card-title">Greening Infrastructure</h5>
-            <p class="card-text">Green infrastructure like bio-swales and urban forests can support flood mitigation while creating jobs for youth.</p>
-          </div>
-        </div>
-      </div>
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Spotlight Initiatives
+      </span>
+
+      <h2 class="section-title">
+        Where water, people and the environment meet.
+      </h2>
+
+      <p class="section-intro">
+        Key areas of interest within the broader water,
+        sanitation and climate-action conversation.
+      </p>
+
     </div>
+
+
+    <div class="spotlight-grid">
+
+
+      <!-- WATER ACCESS -->
+
+      <article class="spotlight-card">
+
+        <img
+          src="imgs/canter.jpg"
+          alt="Water trucking"
+          class="spotlight-image"
+        >
+
+        <div class="spotlight-content">
+
+          <span class="spotlight-label">
+            Access
+          </span>
+
+          <h3>
+            Nairobi's Water Access Challenges
+          </h3>
+
+          <p>
+            Water trucking remains a key intervention in
+            informal settlements. There is an urgent need
+            for piped infrastructure in underserved areas.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SANITATION -->
+
+      <article class="spotlight-card">
+
+        <img
+          src="imgs/water-project.png"
+          alt="Water and sanitation initiative"
+          class="spotlight-image"
+        >
+
+        <div class="spotlight-content">
+
+          <span class="spotlight-label">
+            Sanitation
+          </span>
+
+          <h3>
+            Water + Sanitation Synergy
+          </h3>
+
+          <p>
+            Community-led sanitation initiatives can help
+            address contamination concerns in the Nairobi
+            River Basin while connecting innovation with
+            participation.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- GREEN INFRASTRUCTURE -->
+
+      <article class="spotlight-card">
+
+        <img
+          src="imgs/environment-impact.png"
+          alt="Green infrastructure and climate action"
+          class="spotlight-image"
+        >
+
+        <div class="spotlight-content">
+
+          <span class="spotlight-label">
+            Climate Action
+          </span>
+
+          <h3>
+            Greening Infrastructure
+          </h3>
+
+          <p>
+            Green infrastructure such as bio-swales and
+            urban forests can support flood mitigation
+            while creating opportunities for youth.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
   </div>
+
 </section>
-<section class="container py-5 text-center">
-  <h4>Towards Kenya’s 100% Water Coverage Vision</h4>
-  <p class="lead mx-auto" style="max-width: 720px;">
-    This portfolio reflects my commitment to shaping Kenya’s water future — blending communication strategy, ground experience, and forward-looking policy integration.
-  </p>
+
+
+<!-- =======================================================
+     CLOSING STATEMENT
+======================================================= -->
+
+<section class="closing">
+
+  <div class="container">
+
+    <div class="closing-inner">
+
+      <span class="closing-label">
+        Looking Ahead
+      </span>
+
+      <h2>
+        Towards Kenya's Water Future
+      </h2>
+
+      <p>
+        This portfolio reflects my commitment to shaping
+        Kenya's water future — blending communication
+        strategy, ground experience and forward-looking
+        thinking around sustainable water management.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
-    <footer style="
-  background: rgba(19, 18, 65, 0.85);
-  backdrop-filter: blur(8px);
-  padding: 18px 10px;
-  text-align: center;
-">
-  <p style="
-    margin: 0;
-    font-size: 0.85rem;
-    color: #d1d5db;
-    letter-spacing: 0.3px;
-  ">
-    © 2026 <strong style="color:#ffffff;">EcoHub</strong>. All rights reserved.
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  <p>
+    © 2026
+    <strong>Evans Gitau</strong>
+    | All Rights Reserved
   </p>
+
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
 </body>
 </html>
